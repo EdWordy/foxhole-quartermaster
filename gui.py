@@ -8,6 +8,7 @@ import pandas as pd
 import sys
 import os
 from datetime import datetime
+from analytics_gui import AnalyticsWindow
 
 def resource_path(relative_path):
     """Get absolute path to resource, works for dev and for PyInstaller"""
@@ -48,16 +49,23 @@ class InventoryScanner(tk.Tk):
         self.create_image_frame()
         self.create_results_frame()
         
+        # Modify the create_input_frame method in your main GUI class
     def create_input_frame(self):
         """Create frame for input controls"""
         input_frame = ttk.Frame(self, padding="5")
         input_frame.grid(row=0, column=0, columnspan=2, sticky="ew")
         
         # Add buttons
-        ttk.Button(input_frame, text="Select Image(s)", command=self.select_images).pack(side=tk.LEFT, padx=5)
-        ttk.Button(input_frame, text="Process Selected", command=self.process_images).pack(side=tk.LEFT, padx=5)
-        ttk.Button(input_frame, text="Clear Selection", command=self.clear_selection).pack(side=tk.LEFT, padx=5)
-        ttk.Button(input_frame, text="Save Results", command=self.save_results).pack(side=tk.LEFT, padx=5)
+        ttk.Button(input_frame, text="Select Screenshot(s)", 
+                  command=self.select_images).pack(side=tk.LEFT, padx=5)
+        ttk.Button(input_frame, text="Process Selected", 
+                  command=self.process_images).pack(side=tk.LEFT, padx=5)
+        ttk.Button(input_frame, text="Clear Selection", 
+                  command=self.clear_selection).pack(side=tk.LEFT, padx=5)
+        ttk.Button(input_frame, text="Save Results", 
+                  command=self.save_results).pack(side=tk.LEFT, padx=5)
+        ttk.Button(input_frame, text="Analytics", 
+                  command=self.open_analytics).pack(side=tk.LEFT, padx=5)
         
         # Add checkboxes for options
         self.show_visualization = tk.BooleanVar(value=False)
@@ -67,6 +75,11 @@ class InventoryScanner(tk.Tk):
         # Add selected files counter
         self.files_label = ttk.Label(input_frame, text="No files selected")
         self.files_label.pack(side=tk.RIGHT, padx=5)
+
+    def open_analytics(self):
+        """Open the analytics window"""
+        analytics_window = AnalyticsWindow(self)
+        analytics_window.grab_set()  # Make the window modal
         
     def create_image_frame(self):
         """Create frame for image display and file list"""

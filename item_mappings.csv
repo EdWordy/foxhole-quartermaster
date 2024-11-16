@@ -29,6 +29,8 @@ code,name
 16C,Sampo Autorifle (crate)
 20,Blakerow carbine
 20C,Blakerow carbine (crate)
+23,Lougcaster No.2 Rifle
+23C,Loughcaster No.2 Rifle (crate)
 24,7.62mm rounds
 24C,7.62mm rounds (crate)
 31,9mm rounds 
@@ -97,6 +99,8 @@ code,name
 121C,Ambulance (crate)
 127,O'Brien AC
 127C,O'Brien AC (crate)
+128,Mulloy APC
+128C,Mulloy APC (crate)
 145,BMS Ironship
 145C,BMS Ironship (crate)
 174,Kivela Powerwheel
