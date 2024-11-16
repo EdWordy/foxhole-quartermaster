@@ -22,13 +22,19 @@ class NumberMapper:
     
     def get_number_value(self, template_name):
         """Convert number template name to actual value."""
+        # Extract the number if it's in the format 'numX'
+        if template_name.startswith('num') and len(template_name) > 3:
+            try:
+                return str(int(template_name[3:]))
+            except ValueError:
+                pass
         return self.mappings.get(template_name, template_name)
 
 class QuantityComposer:
     def __init__(self, number_mapper):
         self.number_mapper = number_mapper
     
-    def compose_quantity(self, number_matches, reference_x, reference_y, max_distance=100):
+    def compose_quantity(self, number_matches, reference_x, reference_y, max_distance=150):
         """
         Compose multi-digit numbers from individual digit matches.
         Args:
@@ -44,8 +50,11 @@ class QuantityComposer:
             x, y, w, h = match["location"]
             if (x > reference_x and 
                 x < reference_x + max_distance and 
-                abs(y - reference_y) < h):
-                relevant_numbers.append(match)
+                abs(y - reference_y) < h * 1.5):  # Vertical tolerance
+                relevant_numbers.append({
+                    **match,
+                    "distance_from_ref": x - reference_x
+                })
         
         if not relevant_numbers:
             return None
@@ -53,13 +62,40 @@ class QuantityComposer:
         # Sort by x coordinate to get correct digit order
         relevant_numbers.sort(key=lambda m: m["location"][0])
         
-        # Compose the number from individual digits
-        composed_number = ''
-        for match in relevant_numbers:
-            digit = self.number_mapper.get_number_value(match["template_name"])
-            composed_number += str(digit)
+        # Group digits that are close to each other
+        digit_groups = []
+        current_group = [relevant_numbers[0]]
+        
+        for i in range(1, len(relevant_numbers)):
+            curr = relevant_numbers[i]
+            prev = relevant_numbers[i-1]
+            curr_x = curr["location"][0]
+            prev_x = prev["location"][0]
             
-        try:
-            return int(composed_number)
-        except ValueError:
-            return None
+            # If digits are close enough, add to current group
+            if curr_x - prev_x <= 40:  # Increased maximum gap between digits
+                current_group.append(curr)
+            else:
+                # Start new group if gap is too large
+                digit_groups.append(current_group)
+                current_group = [curr]
+        
+        digit_groups.append(current_group)
+        
+        # Use the group closest to the reference point
+        if digit_groups:
+            best_group = min(digit_groups, 
+                           key=lambda group: min(d["distance_from_ref"] for d in group))
+            
+            # Compose the number from the best group
+            composed_number = ''
+            for match in best_group:
+                digit = self.number_mapper.get_number_value(match["template_name"])
+                composed_number += str(digit)
+                
+            try:
+                return int(composed_number)
+            except ValueError:
+                return None
+                
+        return None

@@ -38,7 +38,6 @@ class DataProcessor:
             })
             
         return inventory_data
-
     def save_to_excel(self, inventory_data, output_path=None):
         """Save inventory data to formatted Excel file."""
         if output_path is None:

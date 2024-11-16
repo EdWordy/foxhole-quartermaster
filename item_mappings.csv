@@ -37,24 +37,64 @@ code,name
 36C,20mm rounds (crate)
 66,Binoculars 
 66C,Binoculars (crate)
-72,Sledgehammer
-72C,Sledgehammer (crate)
-76,Wrench
-76C,Wrench (crate)
-80,Radio
+72,Sledgehammers
+72C,Sledgehammers (crate)
+76,Wrenches
+76C,Wrenches (crate)
+77,Bayonets
+77C,Bayonets (crate)
+78,Gas Masks
+78C,Gas Masks (crate)
+79,Gas Mask Filters
+79C,Gas Mask Filters (crate)
+80,Radios
 80C,Radio (crate)
+82,Bandages
+82C,Bandages (crate)
 83,Medical Kit 
 83C,Medical Kit (crate)
+84,Trauma Kit
+84C,Trauma Kit (crate)
+85,Blood Plasma
+85C,Blood Plasma (crate)
 86,Soldier Supplies
 86C,Soldier Supplies (crate)
 87,Diesel
 87C,Diesel (crate)
+88,Petrol
+88C,Petrol (crate)
+89,Aluminum Alloy
+89C,Aluminum Alloy (crate)
+91,Basic Materials
+91C,Basic Materials (crate)
+92,Explosive Materials
+92C,Explosive Materials (crate)
 93,Maintenance Supplies
 93C,Maintenance Supplies (crate)
+94,High Explosive Materials
+94C,High Explosive Materials (crate)
+95,Iron Alloy
+95C,Iron Alloy (crate)
+96,Refined Materials
+96C,Refined Materials (crate)
+105,Gunners Breastplate
+105C,Gunners Breastplate (crate)
 107,Sapper Uniforms
 107C,Sapper Uniforms (crate)
 110,Medic Uniforms
 110C,Medic Uniforms (crate)
+113,Outriders Mantle
+113C,Outriders Mantle (crate)
+115,Caovish Parka
+115C,Caovish Parka (crate)
+116,Basic Colonial Uniform
+117,Basic Warden Uniform
+119,Padded Boilersuit 
+119C,Padded Boilersuit (crate)
+120,Battle Bus
+120C,Battle Bus (crate)
+121,Ambulance
+121C,Ambulance (crate)
 127,O'Brien AC
 127C,O'Brien AC (crate)
 145,BMS Ironship
@@ -77,7 +117,4 @@ code,name
 208C,Sandbags (crate)
 232,Gravel
 232C,Gravel (crate)
-
-
-
 
