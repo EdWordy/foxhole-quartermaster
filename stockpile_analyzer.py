@@ -7,6 +7,8 @@ import os
 
 class StockpileAnalyzer:
     def __init__(self, mapping_file='item_mappings.csv'):
+        from utils.threshold_manager import ThresholdManager
+        self.threshold_manager = ThresholdManager(mapping_file)
         # Default thresholds for categories
         self.default_thresholds = {
             'Light Arms': 40,
@@ -289,25 +291,23 @@ Category Totals:
             return f"Error generating summary: {str(e)}"
 
     def get_critical_items(self, data):
-        """Get list of items below their threshold values."""
-        critical_items = []
-        latest_data = data.sort_values('Timestamp').groupby('Item Code').last()
-        
-        for _, row in latest_data.iterrows():
-            category = row['Category']
-            threshold = self.default_thresholds.get(category, self.default_thresholds['Other'])
+            """Get list of items below their threshold values."""
+            critical_items = []
+            latest_data = data.sort_values('Timestamp').groupby('Item Code').last()
             
-            if row['Quantity'] < threshold:
-                critical_items.append({
-                    'Category': category,
-                    'Item Code': row.name,
-                    'Item Name': row['Item Name'],
-                    'Current Quantity': row['Quantity'],
-                    'Threshold': threshold,
-                    'Needed': threshold - row['Quantity']
-                })
-        
-        return sorted(critical_items, key=lambda x: x['Category'])
+            for _, row in latest_data.iterrows():
+                threshold = self.threshold_manager.get_threshold(row.name)
+                if row['Quantity'] < threshold:
+                    critical_items.append({
+                        'Category': row['Category'],
+                        'Item Code': row.name,
+                        'Item Name': row['Item Name'],
+                        'Current Quantity': row['Quantity'],
+                        'Threshold': threshold,
+                        'Needed': threshold - row['Quantity']
+                    })
+            
+            return sorted(critical_items, key=lambda x: x['Category'])
 
     def get_category_stats(self, data):
         """Get statistics for each category."""
@@ -327,3 +327,23 @@ Category Totals:
             }
         
         return stats
+
+    def validate_and_clean_data(self, data):
+        """Validate and clean the loaded data."""
+        try:
+            # Convert quantity to numeric, replacing N/A and errors with 0
+            data['Quantity'] = pd.to_numeric(data['Quantity'].replace('N/A', '0'), 
+                                           errors='coerce').fillna(0)
+            
+            # Ensure timestamps are datetime
+            data['Timestamp'] = pd.to_datetime(data['Timestamp'])
+            
+            # Remove duplicates based on Item Code and Timestamp
+            data = data.drop_duplicates(subset=['Item Code', 'Timestamp'])
+            
+            # Sort by timestamp
+            data = data.sort_values('Timestamp')
+            
+            return data
+        except Exception as e:
+            raise ValueError(f"Error validating data: {str(e)}")
