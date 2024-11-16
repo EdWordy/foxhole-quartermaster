@@ -1,16 +1,16 @@
 code,name
-1,Dusk
-1C,Dusk (crate)
+1,Dusk ce.III
+1C,Dusk ce.III (crate)
 2,Booker Storm Rifle
 2C,Booker Storm Rifle (crate)
 3,Aalto Storm Rifle
 3C,Aalto Storm Rifle (crate)
 4,7.92mm rounds
 4C,7.92mm rounds (crate)
-5,TODO
-5C,TODO
-6,Typhon MG
-6C,Typhon MG (crate)
+5,Catara LMG
+5C,Catara LMG (crate)
+6,Gast MG
+6C,Gast MG (crate)
 7,Malone MG 
 7C,Malone MG (crate)
 8,12.7mm box of rounds
@@ -21,8 +21,8 @@ code,name
 11C,Cascadier Pistol (crate)
 13,Cometa Revolver
 13C,Cometa Revolver (crate)
-14,Hangedman Rifle
-14C,Hangedman Rifle (crate)
+14,Hangman Rifle
+14C,Hangman Rifle (crate)
 15,.44 rounds
 15C,.44 rounds (crate)
 16,Sampo Autorifle 
@@ -51,10 +51,10 @@ code,name
 80C,Radio (crate)
 82,Bandages
 82C,Bandages (crate)
-83,Medical Kit 
-83C,Medical Kit (crate)
-84,Trauma Kit
-84C,Trauma Kit (crate)
+83,Medical Kits 
+83C,Medical Kits (crate)
+84,Trauma Kits
+84C,Trauma Kits (crate)
 85,Blood Plasma
 85C,Blood Plasma (crate)
 86,Soldier Supplies
@@ -77,20 +77,20 @@ code,name
 95C,Iron Alloy (crate)
 96,Refined Materials
 96C,Refined Materials (crate)
-105,Gunners Breastplate
-105C,Gunners Breastplate (crate)
+105,Gunners Breastplates
+105C,Gunners Breastplates (crate)
 107,Sapper Uniforms
 107C,Sapper Uniforms (crate)
 110,Medic Uniforms
 110C,Medic Uniforms (crate)
-113,Outriders Mantle
-113C,Outriders Mantle (crate)
-115,Caovish Parka
-115C,Caovish Parka (crate)
-116,Basic Colonial Uniform
-117,Basic Warden Uniform
-119,Padded Boilersuit 
-119C,Padded Boilersuit (crate)
+113,Outriders Mantles
+113C,Outriders Mantles (crate)
+115,Caovish Parkas
+115C,Caovish Parkas (crate)
+116,Basic Colonial Uniforms
+117,Basic Warden Uniforms
+119,Padded Boilersuits
+119C,Padded Boilersuits (crate)
 120,Battle Bus
 120C,Battle Bus (crate)
 121,Ambulance
