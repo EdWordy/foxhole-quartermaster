@@ -3,6 +3,11 @@ An application for compiling and tracking stockpile data for the game Foxhole.
 
 *NOTE: Heavily WIP*
 
+## For Most Users
+
+1) Download the latest release (.exe)
+2) Run the program
+
 ## Goal(s)
 
 1) A simple stockpile management tool that involves screenshots, and translating those screenshots into spreadsheets.
@@ -23,3 +28,12 @@ Software is provided as-is and the author assumes no responsibility for its usag
 
 MIT
 
+## Build Instructions
+
+1) Download the source code
+2) Open Thonny (or a similar program)
+3) Check for installed prereqs (Numpy, Pyinstaller, OpenCV, etc.)
+4) Open a console in the source code folder
+5) run `build.bat`
+6) ????
+7) profit
