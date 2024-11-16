@@ -2,7 +2,8 @@
 import pandas as pd
 from datetime import datetime
 from pathlib import Path
-from detector.number_mapper import QuantityComposer
+import os
+from detector.number_mapper import QuantityComposer  # Added this import
 
 class DataProcessor:
     def __init__(self, item_mapper=None, number_mapper=None):
@@ -32,17 +33,23 @@ class DataProcessor:
                 "Item Code": icon_code,
                 "Item Name": item_name,
                 "Quantity": quantity if quantity is not None else "N/A",
-                "Confidence": f"{icon['confidence']:.3f}",
-                "X": icon_x,
-                "Y": icon_y
+                #"Confidence": f"{icon['confidence']:.3f}",
+                #"X": icon_x,
+                #"Y": icon_y
             })
             
         return inventory_data
-    def save_to_excel(self, inventory_data, output_path=None):
+
+    def save_to_excel(self, inventory_data, output_path=None, image_path=None):
         """Save inventory data to formatted Excel file."""
         if output_path is None:
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-            output_path = f"inventory_report_{timestamp}.xlsx"
+            # If image path is provided, use its name in the output filename
+            if image_path:
+                base_name = os.path.splitext(os.path.basename(image_path))[0]
+                output_path = f"Reports/inv_report_{base_name}_{timestamp}.xlsx"
+            else:
+                output_path = f"Reports/inv_report_{timestamp}.xlsx"
         
         output_path = Path(output_path)
         df = pd.DataFrame(inventory_data)

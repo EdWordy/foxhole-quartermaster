@@ -16,8 +16,8 @@ def process_inventory_screenshot(
     visualize=True,
     save_excel=True
 ):
-    """Process inventory screenshot with item and number mapping."""
-    # Initialize detectors and mappers
+    """Process inventory screenshot with item name mapping."""
+    # Initialize detectors and mapper
     icon_detector = TemplateMatcher(icon_template_dir, threshold=0.95)
     number_detector = TemplateMatcher(number_template_dir, threshold=0.95)
     item_mapper = ItemMapper(item_mapping_file)
@@ -46,10 +46,11 @@ def process_inventory_screenshot(
     inventory_data = data_processor.process_inventory_data(icon_matches, number_matches)
     
     if save_excel:
-        excel_path = data_processor.save_to_excel(inventory_data)
+        excel_path = data_processor.save_to_excel(inventory_data, image_path=image_path)
         print(f"Saved inventory report to: {excel_path}")
     
     return inventory_data
+
 
 if __name__ == "__main__":
     inventory_data = process_inventory_screenshot(

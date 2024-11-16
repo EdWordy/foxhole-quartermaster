@@ -60,7 +60,7 @@ class InventoryScanner(tk.Tk):
         ttk.Button(input_frame, text="Save Results", command=self.save_results).pack(side=tk.LEFT, padx=5)
         
         # Add checkboxes for options
-        self.show_visualization = tk.BooleanVar(value=True)
+        self.show_visualization = tk.BooleanVar(value=False)
         ttk.Checkbutton(input_frame, text="Show Detection Visualization", 
                        variable=self.show_visualization).pack(side=tk.LEFT, padx=5)
         
@@ -225,13 +225,27 @@ class InventoryScanner(tk.Tk):
             messagebox.showerror("Error", f"Error processing images: {str(e)}")
             
     def save_results(self):
-        """Save results to Excel file"""
+        """Save results to Excel file with image name prefix"""
         if not self.results_tree.get_children():
             messagebox.showwarning("Warning", "No results to save.")
             return
             
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        default_filename = f"inventory_report_{timestamp}.xlsx"
+        # Get unique filenames from results
+        files = set()
+        for item in self.results_tree.get_children():
+            values = self.results_tree.item(item)['values']
+            files.add(values[0])  # First column contains filename
+        
+        # If there's only one file, use it as prefix
+        if len(files) == 1:
+            filename = list(files)[0]
+            base_name = os.path.splitext(filename)[0]  # Remove extension
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            default_filename = f"Reports/{base_name}_inventory_{timestamp}.xlsx"
+        else:
+            # If multiple files, use a generic name
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            default_filename = f"Reports/batch_inventory_{timestamp}.xlsx"
         
         file_path = filedialog.asksaveasfilename(
             defaultextension='.xlsx',
@@ -253,29 +267,41 @@ class InventoryScanner(tk.Tk):
             # Save to Excel
             df = pd.DataFrame(data)
             
-            # Create Excel writer with formatting
+            # If multiple files, create separate sheets for each file
             with pd.ExcelWriter(file_path, engine='xlsxwriter') as writer:
-                df.to_excel(writer, sheet_name='Inventory', index=False)
-                
-                # Get workbook and worksheet objects
-                workbook = writer.book
-                worksheet = writer.sheets['Inventory']
-                
-                # Add formats
-                header_format = workbook.add_format({
-                    'bold': True,
-                    'bg_color': '#D8E4BC',
-                    'border': 1
-                })
-                
-                # Apply formats
-                for col_num, value in enumerate(df.columns.values):
-                    worksheet.write(0, col_num, value, header_format)
+                if len(files) > 1:
+                    # Create summary sheet with all data
+                    df.to_excel(writer, sheet_name='All Results', index=False)
                     
-                # Auto-adjust column widths
-                for i, col in enumerate(df.columns):
-                    max_length = max(df[col].astype(str).apply(len).max(), len(col)) + 2
-                    worksheet.set_column(i, i, max_length)
+                    # Create individual sheets for each file
+                    for filename in files:
+                        file_data = df[df['File'] == filename]
+                        sheet_name = os.path.splitext(filename)[0][:31]  # Excel limits sheet names to 31 chars
+                        file_data.to_excel(writer, sheet_name=sheet_name, index=False)
+                else:
+                    # Single file - just one sheet
+                    df.to_excel(writer, sheet_name='Inventory', index=False)
+                
+                # Format each worksheet
+                for worksheet in writer.sheets.values():
+                    workbook = writer.book
+                    header_format = workbook.add_format({
+                        'bold': True,
+                        'bg_color': '#D8E4BC',
+                        'border': 1
+                    })
+                    
+                    # Apply header format
+                    for col_num, value in enumerate(df.columns.values):
+                        worksheet.write(0, col_num, value, header_format)
+                        
+                    # Auto-adjust column widths
+                    for i, col in enumerate(df.columns):
+                        max_length = max(
+                            df[col].astype(str).apply(len).max(),
+                            len(col)
+                        ) + 2
+                        worksheet.set_column(i, i, max_length)
             
             messagebox.showinfo("Success", f"Results saved to {file_path}")
 
