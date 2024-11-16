@@ -5,24 +5,31 @@ from pathlib import Path
 class ItemMapper:
     def __init__(self, mapping_file):
         self.mapping_file = Path(mapping_file)
-        self.mappings = self._load_mappings()
+        self.mappings = {}
+        self.categories = {}
+        self._load_mappings()
         
     def _load_mappings(self):
         """Load item mappings from CSV file."""
         try:
             df = pd.read_csv(self.mapping_file)
-            # Convert to dictionary for faster lookups
-            return dict(zip(df['code'], df['name']))
+            # Create mappings dictionary
+            for _, row in df.iterrows():
+                self.mappings[row['code']] = row['name']
+                self.categories[row['code']] = row['category']
         except FileNotFoundError:
             print(f"Warning: Mapping file {self.mapping_file} not found. Using raw codes.")
-            return {}
-        except pd.errors.EmptyDataError:
-            print(f"Warning: Mapping file {self.mapping_file} is empty. Using raw codes.")
-            return {}
         except Exception as e:
             print(f"Warning: Error loading mapping file: {e}. Using raw codes.")
-            return {}
-    
+            
     def get_item_name(self, code):
-        """Convert item code to human-readable name."""
-        return self.mappings.get(code, code)  # Return original code if no mapping exists
+        """Get item name from code."""
+        return self.mappings.get(code, code)
+    
+    def get_item_category(self, code):
+        """Get item category from code."""
+        return self.categories.get(code, "Unknown")
+        
+    def get_all_categories(self):
+        """Get list of all unique categories."""
+        return list(set(self.categories.values()))

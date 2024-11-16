@@ -6,45 +6,73 @@ from pathlib import Path
 import os
 
 class StockpileAnalyzer:
-    def __init__(self):
-        # Define categories with default thresholds
-        self.categories = {
-            'Infantry Equipment': {
-                'codes': ['23C'],
-                'threshold': 50,
-                'description': 'Rifles and basic infantry weapons'
-            },
-            'Ammunition': {
-                'codes': ['24C', '31C', '36C'],
-                'threshold': 100,
-                'description': '7.62mm, 9mm, 20mm rounds'
-            },
-            'Uniforms': {
-                'codes': ['107C', '110C'],
-                'threshold': 10,
-                'description': 'Sapper and Medic uniforms'
-            },
-            'Vehicles': {
-                'codes': ['128', '145'],
-                'threshold': 2,
-                'description': 'APCs and other vehicles'
-            },
-            'Construction': {
-                'codes': ['208C', '232C'],
-                'threshold': 10,
-                'description': 'Building materials'
-            },
-            'Logistics': {
-                'codes': ['205'],
-                'threshold': 5,
-                'description': 'Logistics and transport items'
-            },
-            'Supplies': {
-                'codes': ['76C', '80C', '85C', '86C', '93C'],
-                'threshold': 10,
-                'description': 'Various supplies and equipment'
-            }
+    def __init__(self, mapping_file='item_mappings.csv'):
+        # Default thresholds for categories
+        self.default_thresholds = {
+            'Light Arms': 40,
+            'Heavy Arms': 25,
+            'Munitions': 40,
+            'Infantry Equipment': 25,
+            'Maintenance': 10,
+            'Medical': 15,
+            'Uniforms': 10,
+            'Vehicles': 5,
+            'Materials': 25,
+            'Supplies': 20,
+            'Logistics': 5,
+            'Other': 0  # Default for uncategorized items
         }
+        
+        # Load mappings and build categories
+        self.load_mappings(mapping_file)
+
+    def load_mappings(self, mapping_file):
+        """Load item mappings and build categories dynamically."""
+        try:
+            df = pd.read_csv(mapping_file)
+            
+            # Initialize categories based on unique categories in mappings
+            self.categories = {}
+            unique_categories = df['category'].unique()
+            
+            for category in unique_categories:
+                category_items = df[df['category'] == category]
+                self.categories[category] = {
+                    'codes': category_items['code'].tolist(),
+                    'threshold': self.default_thresholds.get(category, 5),
+                    'description': f"Items: {', '.join(category_items['name'].tolist())}"
+                }
+                
+        except Exception as e:
+            print(f"Error loading mappings: {str(e)}")
+            # Initialize with empty categories if file can't be loaded
+            self.categories = {}
+
+    def add_item_mapping(self, code, name, category):
+        """Add or update an item mapping."""
+        if category not in self.categories:
+            self.categories[category] = {
+                'codes': [code],
+                'threshold': self.default_thresholds.get(category, 5),
+                'description': f"Items: {name}"
+            }
+        else:
+            if code not in self.categories[category]['codes']:
+                self.categories[category]['codes'].append(code)
+                self.categories[category]['description'] = self.categories[category]['description'] + f", {name}"
+
+    def save_mappings(self, mapping_file='item_mappings.csv'):
+        """Save current mappings back to CSV."""
+        mappings = []
+        for category, info in self.categories.items():
+            for code in info['codes']:
+                mappings.append({
+                    'code': code,
+                    'name': self.get_item_name(code),
+                    'category': category
+                })
+        
+        pd.DataFrame(mappings).to_csv(mapping_file, index=False)
 
     def set_threshold(self, category, threshold):
         """Set threshold for a specific category."""
@@ -217,3 +245,85 @@ Category Totals:
                 summary += f"\n- {item['Item Name']}: {item['Current Quantity']} (Need {item['Needed']} more)"
                 
         return summary
+    
+    def get_summary(self, data):
+        """Generate a text summary of the stockpile analysis."""
+        try:
+            # Get basic stats
+            total_items = len(data['Item Code'].unique())
+            total_reports = len(data['Report'].unique()) if 'Report' in data.columns else 1
+            date_range = f"{data['Timestamp'].min():%Y-%m-%d %H:%M} to {data['Timestamp'].max():%Y-%m-%d %H:%M}"
+            
+            # Get category summaries
+            category_totals = data.groupby('Category')['Quantity'].agg(['sum', 'count']).round(2)
+            
+            # Count critical items
+            critical_items = self.get_critical_items(data)
+            num_critical = len(critical_items)
+            
+            # Build summary text
+            summary = f"""Stockpile Analysis Summary
+    ========================
+    Analysis Period: {date_range}
+    Total Reports Analyzed: {total_reports}
+    Unique Items: {total_items}
+    Critical Items: {num_critical}
+
+    Category Summary:
+    ----------------"""
+            
+            for category, stats in category_totals.iterrows():
+                summary += f"\n{category}:"
+                summary += f"\n  Total Items: {int(stats['count'])}"
+                summary += f"\n  Total Quantity: {int(stats['sum'])}"
+                
+            if num_critical > 0:
+                summary += "\n\nCritical Items:"
+                summary += "\n--------------"
+                for item in critical_items:
+                    summary += f"\n- {item['Item Name']}: {item['Current Quantity']} (Threshold: {item['Threshold']})"
+            
+            return summary
+            
+        except Exception as e:
+            return f"Error generating summary: {str(e)}"
+
+    def get_critical_items(self, data):
+        """Get list of items below their threshold values."""
+        critical_items = []
+        latest_data = data.sort_values('Timestamp').groupby('Item Code').last()
+        
+        for _, row in latest_data.iterrows():
+            category = row['Category']
+            threshold = self.default_thresholds.get(category, self.default_thresholds['Other'])
+            
+            if row['Quantity'] < threshold:
+                critical_items.append({
+                    'Category': category,
+                    'Item Code': row.name,
+                    'Item Name': row['Item Name'],
+                    'Current Quantity': row['Quantity'],
+                    'Threshold': threshold,
+                    'Needed': threshold - row['Quantity']
+                })
+        
+        return sorted(critical_items, key=lambda x: x['Category'])
+
+    def get_category_stats(self, data):
+        """Get statistics for each category."""
+        latest_data = data.sort_values('Timestamp').groupby('Item Code').last()
+        stats = {}
+        
+        for category in self.default_thresholds.keys():
+            category_items = latest_data[latest_data['Category'] == category]
+            below_threshold = category_items[
+                category_items['Quantity'] < self.default_thresholds[category]
+            ]
+            
+            stats[category] = {
+                'total_items': len(category_items),
+                'total_quantity': int(category_items['Quantity'].sum()),
+                'below_threshold': len(below_threshold)
+            }
+        
+        return stats
