@@ -19,6 +19,8 @@ NOTE: The included files such as the item_ and number_mappings are necessary, in
 ## TODO
 
 -All the item mappings are not finished; I play warden, and have yet to finish updating the colonials weaponry, and most of the vehicles.
+-Further refinement
+-Expansion of the feature set.
 
 ## Screenshots
 
