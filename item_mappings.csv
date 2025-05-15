@@ -27,19 +27,76 @@ code,name,category
 15C,.44 (crate),Light Arms
 16,Sampo Autorifle,Light Arms
 16C,Sampo Autorifle (crate),Light Arms
+17,Argenti,Light Arms
+17C,Argenti (crate),Light Arms
 20,Blakerow,Light Arms
 20C,Blakerow (crate),Light Arms
 23,Lougcaster No.2 Rifle,Light Arms
 23C,Loughcaster No.2 Rifle (crate),Light Arms
 24,7.62mm,Light Arms
 24C,7.62mm (crate),Light Arms
-31,9mm ,Light Arms
+25,Brasa Shotgun,Light Arms
+25C,Brasa Shotgun (crate),Light Arms
+26,Buckshot,Light Arms
+26C,Buckshot (crate),Light Arms
+27,Pitch Gun,Light Arms
+27C,Pitch Gun (crate),Light Arms
+28,Lionclaw SMG,Light Arms
+28C,Lionclaw SMG (crate),Light Arms
+29,Liar SMG (crate),Light Arms
+29C,Liar SMG (crate),Light Arms
+30,Fiddler SMG,Light Arms
+30C,Fiddler SMG (crate),Light Arms
+31,9mm,Light Arms
 31C,9mm (crate),Light Arms
-36,20mm,Light Arms 
-36C,20mm (crate),Light Arms
+35,Neville ATR,Heavy Arms
+35C,Neville ATR (crate),Heavy Arms
+36,20mm,Heavy Arms 
+36C,20mm (crate),Heavy Arms
+42,Cremari Mortar,Light Arms
+42C,Cremari Mortar (crate),Heavy Arms
+43,Mortar Round - Flare,Heavy Arms
+43C,Mortar Round - Flare (crate),Heavy Arms
+44,Mortar Round - Shrapnel,Heavy Arms
+44C,Mortar Round - Shrapnel (crate),Heavy Arms
+45,Mortar Round - HE,Heavy Arms
+45C,Mortar Round - HE (crate),Heavy Arms
+46,White Ash Flask,Heavy Arms
+46C,White Ash Flask (crate),Heavy Arms
+49,Green Ash Grenade,Light Arms
+49C,Green Ash Grenade (crate),Light Arms
+50,Bomastone Grenade,Light Arms
+50C,Bomastone Grenade (crate),Light Arms
+51,Harpa Grenade,Light Arms
+51C,Harpa Grenade (crate),Light Arms
+52,150mm Shell,Munitions
+52C,150mm Shell (crate),Munitions
+53,Mammon Grenade,Heavy Arms
+53C,Mammon Grenade (crate),Heavy Arms
+55,120mm Shell,Munitions
+55C,120mm Shell (crate),Munitions
+58,Sticky AT Grenade,Heavy Arms
+58C,Sticky AT Grenade (crate),Heavy Arms
+59,Cutler RPG Launcher,Heavy Arms
+59C,Cutler RPG Launcher (crate),Heavy Arms
+60,RPG Rocket,Heavy Arms
+60C,RPG Rocket (crate),Heavy Arms
+61,68mm Shell,Munitions
+61C,68mm Shell,Munitions
+63,40mm Shell,Munitions
+63C,40mm Shell,Munitions
+64,30mm Shell,Heavy Arms
+64C,30mm Shell (crate),Heavy Arms
 66,Binoculars,Infantry Equipment 
-66C,Binoculars (crate),Infantry Equipment 
-72,Sledgehammers,Infantry Equipment 
+66C,Binoculars (crate),Infantry Equipment
+68,Listening Kit, Infantry Equipment
+68C,Listening Kit (crate), Infantry Equipment
+69,Radio Backpack,Infantry Equipment 
+69C,Radio Backpack (crate),Infantry Equipment
+70,Alligator Charge,Infantry Equipment
+71,Shovels,Infantry Equipment
+71C,Shovels (crate),Infantry Equipment
+72,Sledgehammers,Infantry Equipment
 72C,Sledgehammers (crate),Infantry Equipment 
 76,Wrenches,Infantry Equipment 
 76C,Wrenches (crate),Infantry Equipment 
@@ -121,3 +178,5 @@ code,name,category
 208C,Sandbags (crate),Materials
 232,Gravel,Materials
 232C,Gravel (crate),Materials
+282,Pillory Shotgun,Light Arms
+282C,Pillory Shotgun (crate),Light Arms
