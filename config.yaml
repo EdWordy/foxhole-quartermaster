@@ -1,0 +1,30 @@
+paths:
+  templates:
+    icons: CheckImages/Default
+    numbers: CheckImages/Numbers
+  reports: Reports
+  logs: logs
+  item_mappings: item_mappings.csv
+  item_thresholds: item_thresholds.json
+
+detection:
+  confidence_threshold: 0.95
+  max_digit_distance: 150
+
+ui:
+  show_visualization: false
+  default_window_size: 1200x800
+
+category_thresholds:
+  Light Arms: 40
+  Heavy Arms: 25
+  Munitions: 40
+  Infantry Equipment: 25
+  Maintenance: 10
+  Medical: 15
+  Uniforms: 10
+  Vehicles: 5
+  Materials: 30
+  Supplies: 20
+  Logistics: 5
+  Other: 0

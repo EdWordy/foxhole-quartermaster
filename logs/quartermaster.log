@@ -1,0 +1,7 @@
+2025-05-15 18:51:25,182 - FoxholeQuartermaster - INFO - Foxhole Quartermaster initialized
+2025-05-15 18:51:46,636 - FoxholeQuartermaster - INFO - Processing image: C:/Users/edwar/Desktop/StockpileScanner/test-image1.png
+2025-05-15 18:53:00,201 - FoxholeQuartermaster - INFO - Processed image: C:/Users/edwar/Desktop/StockpileScanner/test-image1.png, detected 28 items
+2025-05-15 18:58:06,742 - FoxholeQuartermaster - INFO - Processing image: C:/Users/edwar/Desktop/StockpileScanner/test-image1.png
+2025-05-15 18:58:45,049 - FoxholeQuartermaster - INFO - Processed image: C:/Users/edwar/Desktop/StockpileScanner/test-image1.png, detected 28 items
+2025-05-15 19:00:00,507 - FoxholeQuartermaster - INFO - Loading reports from C:/Users/edwar/Desktop/StockpileScanner/Reports
+2025-05-15 19:00:00,526 - FoxholeQuartermaster - INFO - Loaded 56 records from reports

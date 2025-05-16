@@ -1,3 +1,8 @@
-from .error_logger import ErrorLogger
+# utils/__init__.py
+"""
+Utilities package for the Foxhole Quartermaster application.
+"""
 
-__all__ = ['ErrorLogger']
+from utils.config_manager import ConfigManager
+
+__all__ = ['ConfigManager']

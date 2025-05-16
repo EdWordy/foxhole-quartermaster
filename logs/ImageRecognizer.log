@@ -1,0 +1,3 @@
+2025-05-15 18:51:24,420 - ImageRecognizer - INFO - Loading icon templates from CheckImages\Default
+2025-05-15 18:51:25,162 - ImageRecognizer - INFO - Loading number templates from CheckImages\Numbers
+2025-05-15 18:51:25,181 - ImageRecognizer - INFO - Loaded 456 icon templates and 11 number templates
