@@ -7,6 +7,9 @@ An application for compiling and tracking stockpile data for the game Foxhole.
 
 1) Download the latest release (.exe)
 2) Run the program
+3) Add a screenshot
+4) Generate a report (which creates an excel spreadsheet)
+5) (Optional) Run basic analytics on the data using the analysis window tab
 
 NOTE: The included files such as the item_ and number_mappings are necessary, including the Reports directory (which is where generated data will be placed).
 
