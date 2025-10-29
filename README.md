@@ -25,7 +25,7 @@ NOTE: The included files such as the data/catalog.json, data/processed_templates
 
 - ~~Further refinement~~
 
-- Expansion of the feature set.
+- Expansion of the feature set
 
 - Optimize and improve speed
 
