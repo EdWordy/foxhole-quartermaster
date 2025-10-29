@@ -1,44 +1,61 @@
-
 # -*- mode: python ; coding: utf-8 -*-
-
+"""
+PyInstaller spec file for Foxhole Quartermaster
+Configured to create a single-file executable with optimized exclusions
+"""
 import os
 import sys
 from PyInstaller.utils.hooks import collect_data_files, collect_submodules
 
 block_cipher = None
 
+# ============================================
+# Data Files Configuration
+# ============================================
+
 # Collect all necessary data files
 datas = [
-    ('data/processed_templates/*/*.png', 'data/processed_templates'),
-    ('data/numbers/*.png', 'data/numbers'),
-    ('data/catalog.json', '.'),
-    ('data/item_thresholds.json', '.'),
+    ('data/processed_templates', 'data/processed_templates'),
+    ('data/catalog.json', 'data'),
+    ('data/item_thresholds.json', 'data'),
 ]
 
 # Add config.yaml if it exists
 if os.path.exists('config.yaml'):
     datas.append(('config.yaml', '.'))
 
+# ============================================
+# Hidden Imports Configuration
+# ============================================
+
 # Collect all submodules for packages that might need them
 hiddenimports = [
+    # Core dependencies
     'numpy',
     'pandas',
-    'matplotlib',
-    'matplotlib.backends.backend_tkagg',
-    'matplotlib.backends.backend_agg',
-    'PIL._tkinter_finder',
     'cv2',
     'yaml',
     'xlsxwriter',
+    
+    # Matplotlib and backends
+    'matplotlib',
+    'matplotlib.backends.backend_tkagg',
+    'matplotlib.backends.backend_agg',
+    
+    # PIL/Pillow
+    'PIL',
+    'PIL._tkinter_finder',
+    'PIL.Image',
+    'PIL.ImageTk',
+    
+    # Tkinter components
     'tkinter',
     'tkinter.filedialog',
     'tkinter.messagebox',
     'tkinter.ttk',
     'tkinter.scrolledtext',
-]
-
-# Add all project modules
-hiddenimports.extend([
+    
+    # Project modules
     'core.models',
     'core.image_recognition',
     'core.inventory_manager',
@@ -47,10 +64,66 @@ hiddenimports.extend([
     'utils.error_logger',
     'ui.main_window',
     'ui.analytics_window',
-])
+]
+
+# ============================================
+# Module Exclusions
+# ============================================
+
+# Exclude unnecessary modules to reduce executable size
+excludes = [
+    'scipy',
+    'setuptools',
+    'distutils',
+    'tornado',
+    'PyQt4',
+    'PyQt5',
+    'pydoc',
+    'pythoncom',
+    'pywintypes',
+    'sqlite3',
+    'sklearn',
+    'scapy',
+    'scrapy',
+    'sympy',
+    'kivy',
+    'pyramid',
+    'tensorflow',
+    'pipenv',
+    'pattern',
+    'mechanize',
+    'beautifulsoup4',
+    'requests',
+    'wxPython',
+    'pygi',
+    'pygame',
+    'pyglet',
+    'flask',
+    'django',
+    'pylint',
+    'pytube',
+    'odfpy',
+    'mccabe',
+    'pilkit',
+    'wrapt',
+    'astroid',
+    'isort',
+    # Additional common exclusions
+    'test',
+    'tests',
+    'testing',
+    '_pytest',
+    'pytest',
+    'unittest',
+    'doctest',
+]
+
+# ============================================
+# Analysis Configuration
+# ============================================
 
 a = Analysis(
-    ['main.py'],  # Main script
+    ['main.py'],
     pathex=[],
     binaries=[],
     datas=datas,
@@ -58,25 +131,41 @@ a = Analysis(
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
-    excludes=[],
+    excludes=excludes,
     win_no_prefer_redirects=False,
     win_private_assemblies=False,
     cipher=block_cipher,
     noarchive=False,
 )
 
-pyz = PYZ(a.pure, a.zipped_data, cipher=block_cipher)
+# ============================================
+# PYZ Archive
+# ============================================
+
+pyz = PYZ(
+    a.pure,
+    a.zipped_data,
+    cipher=block_cipher
+)
+
+# ============================================
+# Executable Configuration
+# ============================================
 
 exe = EXE(
     pyz,
     a.scripts,
+    a.binaries,
+    a.zipfiles,
+    a.datas,
     [],
-    exclude_binaries=True,
     name='FoxholeQuartermaster',
     debug=False,
     bootloader_ignore_signals=False,
-    strip=False,
+    strip=True,
     upx=True,
+    upx_exclude=[],
+    runtime_tmpdir=None,
     console=False,
     disable_windowed_traceback=False,
     argv_emulation=False,
@@ -86,22 +175,18 @@ exe = EXE(
     icon='icon.ico' if os.path.exists('icon.ico') else None,
 )
 
-coll = COLLECT(
-    exe,
-    a.binaries,
-    a.zipfiles,
-    a.datas,
-    strip=False,
-    upx=True,
-    upx_exclude=[],
-    name='FoxholeQuartermaster',
-)
+# ============================================
+# macOS Bundle (if applicable)
+# ============================================
 
-# For macOS, create a .app bundle
 if sys.platform == 'darwin':
     app = BUNDLE(
-        coll,
+        exe,
         name='FoxholeQuartermaster.app',
         icon='icon.icns' if os.path.exists('icon.icns') else None,
-        bundle_identifier=None,
+        bundle_identifier='com.foxhole.quartermaster',
+        info_plist={
+            'NSHighResolutionCapable': 'True',
+            'CFBundleShortVersionString': '1.0.0',
+        },
     )
