@@ -45,6 +45,6 @@ MIT
 2) Open Thonny (or a similar program)
 3) Check for installed prereqs (Numpy, Pyinstaller, OpenCV, etc.)
 4) Open a console in the source code folder
-5) type into your console `build.bat` or python build_app.py
+5) type into your console `build.bat` or `python build_app.py`
 6) ????
 7) profit
