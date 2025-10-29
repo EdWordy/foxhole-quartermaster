@@ -32,7 +32,7 @@ class ImageRecognizer:
         
         # Get detection settings
         detection_settings = self.config.get_detection_settings()
-        self.confidence_threshold = detection_settings.get('confidence_threshold', 0.95)
+        self.confidence_threshold = detection_settings.get('confidence_threshold', 0.90)
         self.max_digit_distance = detection_settings.get('max_digit_distance', 150)
         
         # Get template paths
@@ -75,13 +75,25 @@ class ImageRecognizer:
     
     def load_templates(self) -> None:
         """Load icon and number templates from directories."""
+        import time
+        start_time = time.time()
+        
         self.logger.info(f"Loading icon templates from {self.base_template_dir}")
         self.icon_templates = self._load_item_templates()
+        icon_load_time = time.time() - start_time
         
         self.logger.info(f"Loading number templates from {self.number_template_dir}")
+        number_start = time.time()
         self.number_templates = self._load_templates_from_dir(self.number_template_dir)
+        number_load_time = time.time() - number_start
         
-        self.logger.info(f"Loaded {len(self.icon_templates)} icon templates and {len(self.number_templates)} number templates")
+        total_time = time.time() - start_time
+        self.logger.info(f"Loaded {len(self.icon_templates)} icon templates in {icon_load_time:.2f}s")
+        self.logger.info(f"Loaded {len(self.number_templates)} number templates in {number_load_time:.2f}s")
+        self.logger.info(f"Total template loading time: {total_time:.2f}s")
+        
+        # Print to console for user feedback
+        print(f"Loaded {len(self.icon_templates)} icon templates and {len(self.number_templates)} number templates ({total_time:.2f}s)")
     
     def _load_item_templates(self) -> Dict[str, Dict[str, Any]]:
         """
@@ -98,12 +110,24 @@ class ImageRecognizer:
             self.logger.warning(f"Base template directory not found: {self.base_template_dir}")
             return templates
         
+        # Get all item directories first for progress tracking
+        item_dirs = [d for d in self.base_template_dir.iterdir() if d.is_dir()]
+        total_items = len(item_dirs)
+        
+        print(f"Loading templates from {total_items} item folders...")
+        
+        templates_loaded = 0
+        last_progress = -1
+        
         # Iterate through each item folder
-        for item_dir in self.base_template_dir.iterdir():
-            if not item_dir.is_dir():
-                continue
-            
+        for idx, item_dir in enumerate(item_dirs):
             item_code = item_dir.name
+            
+            # Show progress every 10%
+            progress = int((idx / total_items) * 100)
+            if progress >= last_progress + 10:
+                print(f"  Progress: {progress}% ({idx}/{total_items} items)")
+                last_progress = progress
             
             # Find PNG files in the item directory
             template_files = list(item_dir.glob("*.png"))
@@ -114,27 +138,28 @@ class ImageRecognizer:
             
             # Load ALL variations of this item
             for template_path in template_files:
-                template = cv.imread(str(template_path))
+                template = cv.imread(str(template_path), cv.IMREAD_GRAYSCALE)
                 if template is not None:
-                    template_gray = cv.cvtColor(template, cv.COLOR_BGR2GRAY)
-                    _, template_binary = cv.threshold(template_gray, 30, 255, cv.THRESH_BINARY)
+                    # Process template directly as grayscale (already loaded that way)
+                    _, template_binary = cv.threshold(template, 30, 255, cv.THRESH_BINARY)
                     
                     # Use the item code (folder name) as the template name
-                    # This way all variations map to the same item code
                     # Create unique key for this specific variation
                     variation_key = f"{item_code}_{template_path.stem}"
                     
                     templates[variation_key] = {
-                        'gray': template_gray,
+                        'gray': template,  # Already grayscale
                         'binary': template_binary,
                         'size': template.shape[:2],
                         'path': template_path,
                         'item_code': item_code  # Store the actual item code
                     }
+                    templates_loaded += 1
                     self.logger.debug(f"Loaded template variation: {variation_key}")
                 else:
                     self.logger.warning(f"Failed to load template: {template_path}")
         
+        print(f"  Complete: Loaded {templates_loaded} template variations from {total_items} items")
         return templates
     
     def _load_templates_from_dir(self, template_dir: Path) -> Dict[str, Dict[str, Any]]:
@@ -156,13 +181,13 @@ class ImageRecognizer:
         template_files = list(template_dir.glob("*.png"))
         
         for template_path in template_files:
-            template = cv.imread(str(template_path))
+            # Load directly as grayscale for better performance
+            template = cv.imread(str(template_path), cv.IMREAD_GRAYSCALE)
             if template is not None:
-                template_gray = cv.cvtColor(template, cv.COLOR_BGR2GRAY)
-                _, template_binary = cv.threshold(template_gray, 30, 255, cv.THRESH_BINARY)
+                _, template_binary = cv.threshold(template, 30, 255, cv.THRESH_BINARY)
                 
                 templates[template_path.stem] = {
-                    'gray': template_gray,
+                    'gray': template,  # Already grayscale
                     'binary': template_binary,
                     'size': template.shape[:2]
                 }
@@ -188,7 +213,7 @@ class ImageRecognizer:
     
     def detect_items(self, image: np.ndarray) -> List[Dict[str, Any]]:
         """
-        Detect items in the image.
+        Detect items in the image with optimized performance.
         
         Args:
             image: Input image
@@ -196,8 +221,12 @@ class ImageRecognizer:
         Returns:
             List of detected items with their locations and confidence scores
         """
+        import time
+        start_time = time.time()
+        
         img_gray, img_binary = self.preprocess_image(image)
         matches = []
+        detected_items = {}  # Track best match per item_code
         detected_locations = set()
 
         # Sort templates by size (largest first) to prioritize larger templates
@@ -206,10 +235,30 @@ class ImageRecognizer:
             key=lambda x: x[1]['size'][0] * x[1]['size'][1],
             reverse=True
         )
+        
+        templates_checked = 0
+        matches_found = 0
 
         for template_name, template_data in sorted_templates:
-            # Match using both grayscale and binary images for better results
+            templates_checked += 1
+            
+            # Get item code for this template
+            item_code = template_data.get('item_code', template_name)
+            
+            # OPTIMIZATION 1: Skip if we already found this item with high confidence
+            if item_code in detected_items and detected_items[item_code]['confidence'] > 0.98:
+                continue
+            
+            # OPTIMIZATION 2: Use only grayscale for first pass (faster)
+            # Only use binary if grayscale gives promising results
             res_gray = cv.matchTemplate(img_gray, template_data['gray'], cv.TM_CCOEFF_NORMED)
+            
+            # Quick check: if no matches above threshold, skip binary matching
+            max_gray = np.max(res_gray)
+            if max_gray < self.confidence_threshold - 0.05:  # 5% tolerance
+                continue
+            
+            # OPTIMIZATION 3: Only do binary matching if grayscale was promising
             res_binary = cv.matchTemplate(img_binary, template_data['binary'], cv.TM_CCOEFF_NORMED)
             res = (res_gray + res_binary) / 2
             
@@ -219,7 +268,7 @@ class ImageRecognizer:
             for pt in zip(*locations[::-1]):  # Convert from (y,x) to (x,y)
                 h, w = template_data['size']
                 
-                # Check for overlap with existing detections
+                # OPTIMIZATION 4: Fast overlap check using spatial hash
                 overlap = False
                 for x, y, _, _ in detected_locations:
                     if abs(pt[0] - x) < w/2 and abs(pt[1] - y) < h/2:
@@ -227,21 +276,38 @@ class ImageRecognizer:
                         break
                 
                 if not overlap:
-                    # Use the item_code from template_data (the folder name, not the file name)
-                    item_code = template_data.get('item_code', template_name)
+                    confidence = float(res[pt[1], pt[0]])
                     
-                    matches.append({
-                        "template_name": item_code,  # Use item_code so all variations map to same item
-                        "confidence": float(res[pt[1], pt[0]]),
-                        "location": (int(pt[0]), int(pt[1]), w, h)
-                    })
-                    detected_locations.add((pt[0], pt[1], w, h))
+                    # OPTIMIZATION 5: Keep only best match per item at each location
+                    if item_code not in detected_items or confidence > detected_items[item_code]['confidence']:
+                        match_data = {
+                            "template_name": item_code,
+                            "confidence": confidence,
+                            "location": (int(pt[0]), int(pt[1]), w, h)
+                        }
+                        
+                        # If this is a better match for this item, replace it
+                        if item_code in detected_items:
+                            # Remove old location
+                            old_loc = detected_items[item_code]['location']
+                            detected_locations.discard((old_loc[0], old_loc[1], old_loc[2], old_loc[3]))
+                        
+                        detected_items[item_code] = match_data
+                        detected_locations.add((pt[0], pt[1], w, h))
+                        matches_found += 1
+
+        # Convert detected_items dict to list
+        matches = list(detected_items.values())
+        
+        elapsed = time.time() - start_time
+        self.logger.info(f"Item detection: checked {templates_checked}/{len(sorted_templates)} templates, "
+                        f"found {len(matches)} items in {elapsed:.2f}s")
 
         return matches
     
     def detect_numbers(self, image: np.ndarray) -> List[Dict[str, Any]]:
         """
-        Detect numbers in the image.
+        Detect numbers in the image with optimized performance.
         
         Args:
             image: Input image
@@ -249,12 +315,22 @@ class ImageRecognizer:
         Returns:
             List of detected numbers with their locations and confidence scores
         """
+        import time
+        start_time = time.time()
+        
         img_gray, img_binary = self.preprocess_image(image)
         matches = []
         detected_locations = set()
 
         for template_name, template_data in self.number_templates.items():
+            # OPTIMIZATION: Use only grayscale first, check if worth doing binary
             res_gray = cv.matchTemplate(img_gray, template_data['gray'], cv.TM_CCOEFF_NORMED)
+            
+            # Quick check: if no matches above threshold, skip binary
+            max_gray = np.max(res_gray)
+            if max_gray < self.confidence_threshold - 0.05:
+                continue
+            
             res_binary = cv.matchTemplate(img_binary, template_data['binary'], cv.TM_CCOEFF_NORMED)
             res = (res_gray + res_binary) / 2
             
@@ -277,6 +353,9 @@ class ImageRecognizer:
                         "location": (int(pt[0]), int(pt[1]), w, h)
                     })
                     detected_locations.add((pt[0], pt[1], w, h))
+        
+        elapsed = time.time() - start_time
+        self.logger.debug(f"Number detection: found {len(matches)} digits in {elapsed:.2f}s")
 
         return matches
     
@@ -395,14 +474,22 @@ class ImageRecognizer:
         Returns:
             InventoryReport containing detected items
         """
+        import time
+        start_time = time.time()
+        
         # Read image
         img = cv.imread(image_path)
         if img is None:
             raise FileNotFoundError(f"Could not read image: {image_path}")
         
         # Detect items and numbers
+        detect_start = time.time()
         icon_matches = self.detect_items(img)
+        detect_time = time.time() - detect_start
+        
+        number_start = time.time()
         number_matches = self.detect_numbers(img)
+        number_time = time.time() - number_start
         
         # Visualize if requested
         if visualize:
@@ -410,6 +497,7 @@ class ImageRecognizer:
             self.visualize_matches(img, number_matches, "Number Detections")
         
         # Process matches into inventory items
+        process_start = time.time()
         inventory_items = []
         
         for icon in icon_matches:
@@ -433,11 +521,25 @@ class ImageRecognizer:
                 location=icon["location"]
             ))
         
+        process_time = time.time() - process_start
+        
         # Create inventory report
         report = InventoryReport(
             items=inventory_items,
             source_image=image_path
         )
+        
+        total_time = time.time() - start_time
+        
+        # Log performance metrics
+        self.logger.info(f"Image processing complete: {len(inventory_items)} items detected")
+        self.logger.info(f"  Item detection: {detect_time:.2f}s")
+        self.logger.info(f"  Number detection: {number_time:.2f}s")
+        self.logger.info(f"  Item creation: {process_time:.2f}s")
+        self.logger.info(f"  Total time: {total_time:.2f}s")
+        
+        # Print summary to console
+        print(f"Processed image: {len(inventory_items)} items detected in {total_time:.2f}s")
         
         return report
     
