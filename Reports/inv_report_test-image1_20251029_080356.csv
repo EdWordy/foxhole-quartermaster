@@ -1,0 +1,31 @@
+Item Code,Item Name,Category,Quantity,Confidence,X,Y,Timestamp,Report
+ArmoredCar2TwinW,O’Brien V.190 Knave,Vehicles,1,0.981,504,213,2025-10-29 08:03:56.757265,report_20251029_080356
+ArmoredCarW,O’Brien V.110,Vehicles,2,0.986,308,213,2025-10-29 08:03:56.757265,report_20251029_080356
+ATRifleAmmo_crated,ATRifleAmmo_crated,Other,21,0.977,406,86,2025-10-29 08:03:56.757265,report_20251029_080356
+Binoculars_crated,Binoculars_crated,Other,5,0.975,406,125,2025-10-29 08:03:56.757265,report_20251029_080356
+Concrete_crated,Concrete_crated,Other,1,0.963,112,164,2025-10-29 08:03:56.757265,report_20251029_080356
+Diesel_crated,Diesel_crated,Other,24,0.965,14,86,2025-10-29 08:03:56.757265,report_20251029_080356
+EmplacedInfantryW,Leary Snare Trap 127,Other,1,0.980,308,262,2025-10-29 08:03:56.757265,report_20251029_080356
+EmplacedInfantryW_crated,EmplacedInfantryW_crated,Other,6,0.975,14,311,2025-10-29 08:03:56.757265,report_20251029_080356
+EngineerUniformW_crated,EngineerUniformW_crated,Other,16,0.976,14,125,2025-10-29 08:03:56.757265,report_20251029_080356
+FirstAidKit_crated,FirstAidKit_crated,Other,1,0.979,504,164,2025-10-29 08:03:56.757265,report_20251029_080356
+Freighter,BMS - Ironship,Vehicles,1,0.988,406,213,2025-10-29 08:03:56.757265,report_20251029_080356
+GroundMaterials_crated,GroundMaterials_crated,Other,24,0.976,112,86,2025-10-29 08:03:56.757265,report_20251029_080356
+MaintenanceSupplies_crated,MaintenanceSupplies_crated,Other,9,0.994,112,37,2025-10-29 08:03:56.757265,report_20251029_080356
+MaterialPlatform,Material Pallet,Other,3,0.971,112,262,2025-10-29 08:03:56.757265,report_20251029_080356
+MedicUniformW_crated,MedicUniformW_crated,Other,14,0.961,112,125,2025-10-29 08:03:56.757265,report_20251029_080356
+MGAmmo_crated,MGAmmo_crated,Other,24,0.969,210,86,2025-10-29 08:03:56.757265,report_20251029_080356
+MotorcycleW,Kivela Power Wheel 80-1,Vehicles,6,0.974,112,213,2025-10-29 08:03:56.757265,report_20251029_080356
+Radio_crated,Radio_crated,Other,6,0.967,308,125,2025-10-29 08:03:56.757793,report_20251029_080356
+ResourceContainer,Resource Container,Other,1,0.995,210,262,2025-10-29 08:03:56.757793,report_20251029_080356
+Revolver_crated,Revolver_crated,Other,1,0.970,308,164,2025-10-29 08:03:56.757793,report_20251029_080356
+RifleAmmo_crated,RifleAmmo_crated,Other,22,0.966,308,86,2025-10-29 08:03:56.757793,report_20251029_080356
+RifleLightW_crated,RifleLightW_crated,Other,1,0.963,14,164,2025-10-29 08:03:56.757793,report_20251029_080356
+ShippingContainer,Shipping Container,Other,3,0.987,14,262,2025-10-29 08:03:56.757793,report_20251029_080356
+ShotgunW_crated,ShotgunW_crated,Other,1,0.994,210,164,2025-10-29 08:03:56.757793,report_20251029_080356
+SledgeHammer_crated,SledgeHammer_crated,Other,21,0.969,504,86,2025-10-29 08:03:56.757793,report_20251029_080356
+SMGAmmo_crated,SMGAmmo_crated,Other,10,0.963,210,125,2025-10-29 08:03:56.757793,report_20251029_080356
+SoldierSupplies_crated,SoldierSupplies_crated,Other,20,0.979,14,37,2025-10-29 08:03:56.757793,report_20251029_080356
+TruckResourceW,Dunne Loadlugger 3c,Vehicles,4,0.976,210,213,2025-10-29 08:03:56.757793,report_20251029_080356
+TruckW,Dunne Transport,Vehicles,13,0.980,14,213,2025-10-29 08:03:56.757793,report_20251029_080356
+WorkWrench_crated,WorkWrench_crated,Other,2,0.984,504,125,2025-10-29 08:03:56.757793,report_20251029_080356
