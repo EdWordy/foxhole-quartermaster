@@ -8,7 +8,7 @@ paths:
   item_thresholds: data/item_thresholds.json
 
 detection:
-  confidence_threshold: 0.95
+  confidence_threshold: 0.90
   max_digit_distance: 150
 
 ui:

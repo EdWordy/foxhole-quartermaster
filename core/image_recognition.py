@@ -213,7 +213,8 @@ class ImageRecognizer:
     
     def detect_items(self, image: np.ndarray) -> List[Dict[str, Any]]:
         """
-        Detect items in the image with optimized performance.
+        Detect items in the image with ultra-optimized performance.
+        Uses early termination once item is found with high confidence.
         
         Args:
             image: Input image
@@ -222,86 +223,138 @@ class ImageRecognizer:
             List of detected items with their locations and confidence scores
         """
         import time
+        from concurrent.futures import ThreadPoolExecutor, as_completed
+        import multiprocessing
+        
         start_time = time.time()
         
         img_gray, img_binary = self.preprocess_image(image)
-        matches = []
         detected_items = {}  # Track best match per item_code
         detected_locations = set()
+        items_found = set()  # Track which items we've found with high confidence
 
-        # Sort templates by size (largest first) to prioritize larger templates
-        sorted_templates = sorted(
-            self.icon_templates.items(),
-            key=lambda x: x[1]['size'][0] * x[1]['size'][1],
-            reverse=True
-        )
-        
-        templates_checked = 0
-        matches_found = 0
-
-        for template_name, template_data in sorted_templates:
-            templates_checked += 1
-            
-            # Get item code for this template
+        # Group templates by item_code for smarter processing
+        templates_by_item = {}
+        for template_name, template_data in self.icon_templates.items():
             item_code = template_data.get('item_code', template_name)
+            if item_code not in templates_by_item:
+                templates_by_item[item_code] = []
+            templates_by_item[item_code].append((template_name, template_data))
+        
+        print(f"Detecting items ({len(templates_by_item)} unique items, {len(self.icon_templates)} total variations)...")
+        
+        # CRITICAL OPTIMIZATION: Process items, not individual templates
+        # Once we find an item with high confidence, skip its other variations
+        
+        def match_item_variations(item_code, variations):
+            """Match all variations of an item, stopping early if high confidence found."""
+            # Skip if we already found this item with excellent confidence
+            if item_code in items_found:
+                return []
             
-            # OPTIMIZATION 1: Skip if we already found this item with high confidence
-            if item_code in detected_items and detected_items[item_code]['confidence'] > 0.98:
-                continue
+            best_match = None
             
-            # OPTIMIZATION 2: Use only grayscale for first pass (faster)
-            # Only use binary if grayscale gives promising results
-            res_gray = cv.matchTemplate(img_gray, template_data['gray'], cv.TM_CCOEFF_NORMED)
+            # Sort variations by size (try larger templates first)
+            variations = sorted(variations, 
+                              key=lambda x: x[1]['size'][0] * x[1]['size'][1], 
+                              reverse=True)
             
-            # Quick check: if no matches above threshold, skip binary matching
-            max_gray = np.max(res_gray)
-            if max_gray < self.confidence_threshold - 0.05:  # 5% tolerance
-                continue
-            
-            # OPTIMIZATION 3: Only do binary matching if grayscale was promising
-            res_binary = cv.matchTemplate(img_binary, template_data['binary'], cv.TM_CCOEFF_NORMED)
-            res = (res_gray + res_binary) / 2
-            
-            # Find locations where confidence exceeds threshold
-            locations = np.where(res >= self.confidence_threshold)
-            
-            for pt in zip(*locations[::-1]):  # Convert from (y,x) to (x,y)
-                h, w = template_data['size']
+            for template_name, template_data in variations:
+                # Quick grayscale check first
+                res_gray = cv.matchTemplate(img_gray, template_data['gray'], cv.TM_CCOEFF_NORMED)
+                max_val = np.max(res_gray)
                 
-                # OPTIMIZATION 4: Fast overlap check using spatial hash
-                overlap = False
-                for x, y, _, _ in detected_locations:
-                    if abs(pt[0] - x) < w/2 and abs(pt[1] - y) < h/2:
-                        overlap = True
-                        break
+                # Skip if no promising matches
+                if max_val < self.confidence_threshold - 0.05:
+                    continue
                 
-                if not overlap:
+                # Do full matching
+                res_binary = cv.matchTemplate(img_binary, template_data['binary'], cv.TM_CCOEFF_NORMED)
+                res = (res_gray + res_binary) / 2
+                
+                # Find matches above threshold
+                locations = np.where(res >= self.confidence_threshold)
+                
+                for pt in zip(*locations[::-1]):
+                    h, w = template_data['size']
                     confidence = float(res[pt[1], pt[0]])
                     
-                    # OPTIMIZATION 5: Keep only best match per item at each location
-                    if item_code not in detected_items or confidence > detected_items[item_code]['confidence']:
-                        match_data = {
-                            "template_name": item_code,
-                            "confidence": confidence,
-                            "location": (int(pt[0]), int(pt[1]), w, h)
-                        }
-                        
-                        # If this is a better match for this item, replace it
-                        if item_code in detected_items:
-                            # Remove old location
-                            old_loc = detected_items[item_code]['location']
-                            detected_locations.discard((old_loc[0], old_loc[1], old_loc[2], old_loc[3]))
-                        
-                        detected_items[item_code] = match_data
-                        detected_locations.add((pt[0], pt[1], w, h))
-                        matches_found += 1
-
-        # Convert detected_items dict to list
+                    match = {
+                        'item_code': item_code,
+                        'confidence': confidence,
+                        'location': (int(pt[0]), int(pt[1]), w, h)
+                    }
+                    
+                    # Keep best match
+                    if best_match is None or confidence > best_match['confidence']:
+                        best_match = match
+                    
+                    # CRITICAL: If we found a great match (>0.97), stop checking other variations
+                    if confidence > 0.97:
+                        return [best_match]
+            
+            return [best_match] if best_match else []
+        
+        # Process items in parallel
+        num_workers = max(1, multiprocessing.cpu_count() - 1)
+        all_results = []
+        
+        # Convert to list for progress tracking
+        items_list = list(templates_by_item.items())
+        
+        with ThreadPoolExecutor(max_workers=num_workers) as executor:
+            futures = {executor.submit(match_item_variations, item_code, variations): item_code 
+                      for item_code, variations in items_list}
+            
+            completed = 0
+            for future in as_completed(futures):
+                item_results = future.result()
+                all_results.extend(item_results)
+                
+                # Mark high-confidence items as found
+                for result in item_results:
+                    if result['confidence'] > 0.97:
+                        items_found.add(result['item_code'])
+                
+                completed += 1
+                if completed % 50 == 0:
+                    progress = int((completed / len(items_list)) * 100)
+                    print(f"  Progress: {progress}% ({completed}/{len(items_list)} items checked, {len(all_results)} matches)")
+        
+        # Filter results to avoid overlaps
+        for result in all_results:
+            item_code = result['item_code']
+            location = result['location']
+            confidence = result['confidence']
+            x, y, w, h = location
+            
+            # Check for overlap with existing detections
+            overlap = False
+            for dx, dy, dw, dh in detected_locations:
+                if abs(x - dx) < w/2 and abs(y - dy) < h/2:
+                    overlap = True
+                    break
+            
+            if not overlap:
+                # Keep best match per item at each location
+                if item_code not in detected_items or confidence > detected_items[item_code]['confidence']:
+                    if item_code in detected_items:
+                        old_loc = detected_items[item_code]['location']
+                        detected_locations.discard(old_loc)
+                    
+                    detected_items[item_code] = {
+                        "template_name": item_code,
+                        "confidence": confidence,
+                        "location": location
+                    }
+                    detected_locations.add(location)
+        
         matches = list(detected_items.values())
         
         elapsed = time.time() - start_time
-        self.logger.info(f"Item detection: checked {templates_checked}/{len(sorted_templates)} templates, "
-                        f"found {len(matches)} items in {elapsed:.2f}s")
+        print(f"✓ Detection complete: {len(matches)} items found in {elapsed:.2f}s")
+        self.logger.info(f"Item detection: found {len(matches)} items in {elapsed:.2f}s "
+                        f"(checked {len(items_list)} item types, stopped early on {len(items_found)} high-confidence matches)")
 
         return matches
     
