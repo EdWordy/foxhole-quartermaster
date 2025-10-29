@@ -1,612 +1,3307 @@
 {
-  "1": {
-    "name": "Dusk ce.III",
-    "category": "Light Arms",
-    "threshold": 0
-  },
-  "1C": {
-    "name": "Dusk ce.III (crate)",
-    "category": "Light Arms",
-    "threshold": 0
-  },
-  "2": {
-    "name": "Booker Storm Rifle",
-    "category": "Light Arms",
-    "threshold": 40
-  },
-  "2C": {
-    "name": "Booker Storm Rifle (crate)",
-    "category": "Light Arms",
-    "threshold": 40
-  },
-  "3": {
-    "name": "Aalto Storm Rifle",
-    "category": "Light Arms",
-    "threshold": 40
-  },
-  "3C": {
-    "name": "Aalto Storm Rifle (crate)",
-    "category": "Light Arms",
-    "threshold": 40
-  },
-  "4": {
-    "name": "7.92mm",
-    "category": "Light Arms",
-    "threshold": 40
-  },
-  "4C": {
-    "name": "7.92mm (crate)",
-    "category": "Light Arms",
-    "threshold": 40
-  },
-  "5": {
-    "name": "Catara LMG",
-    "category": "Light Arms",
-    "threshold": 0
-  },
-  "5C": {
-    "name": "Catara LMG (crate)",
-    "category": "Light Arms",
-    "threshold": 0
-  },
-  "6": {
-    "name": "Gast MG",
-    "category": "Light Arms",
-    "threshold": 0
-  },
-  "6C": {
-    "name": "Gast MG (crate)",
-    "category": "Light Arms",
-    "threshold": 0
-  },
-  "7": {
-    "name": "Malone MG",
-    "category": "Light Arms",
-    "threshold": 40
-  },
-  "7C": {
-    "name": "Malone MG (crate)",
-    "category": "Light Arms",
-    "threshold": 40
-  },
-  "8": {
-    "name": "12.7mm",
-    "category": "Light Arms",
-    "threshold": 40
-  },
-  "8C": {
-    "name": "12.7mm (crate)",
-    "category": "Light Arms",
-    "threshold": 40
-  },
-  "9": {
-    "name": "Smoke Grenade",
-    "category": "Light Arms",
-    "threshold": 40
-  },
-  "9C": {
-    "name": "Smoke Grenade (crate)",
-    "category": "Light Arms",
-    "threshold": 40
-  },
-  "11": {
-    "name": "Cascadier Pistol",
-    "category": "Light Arms",
-    "threshold": 40
-  },
-  "11C": {
-    "name": "Cascadier Pistol (crate)",
-    "category": "Light Arms",
-    "threshold": 40
-  },
-  "13": {
-    "name": "Cometa Revolver",
-    "category": "Light Arms",
-    "threshold": 40
-  },
-  "13C": {
-    "name": "Cometa Revolver (crate)",
-    "category": "Light Arms",
-    "threshold": 40
-  },
-  "14": {
-    "name": "Hangman Rifle",
-    "category": "Light Arms",
-    "threshold": 40
-  },
-  "14C": {
-    "name": "Hangman Rifle (crate)",
-    "category": "Light Arms",
-    "threshold": 40
-  },
-  "15": {
-    "name": ".44",
-    "category": "Light Arms",
-    "threshold": 40
-  },
-  "15C": {
-    "name": ".44 (crate)",
-    "category": "Light Arms",
-    "threshold": 40
-  },
-  "16": {
-    "name": "Sampo Autorifle",
-    "category": "Light Arms",
-    "threshold": 40
-  },
-  "16C": {
-    "name": "Sampo Autorifle (crate)",
-    "category": "Light Arms",
-    "threshold": 40
-  },
-  "20": {
-    "name": "Blakerow",
-    "category": "Light Arms",
-    "threshold": 40
-  },
-  "20C": {
-    "name": "Blakerow (crate)",
-    "category": "Light Arms",
-    "threshold": 40
-  },
-  "23": {
-    "name": "Lougcaster No.2 Rifle",
-    "category": "Light Arms",
-    "threshold": 40
-  },
-  "23C": {
-    "name": "Loughcaster No.2 Rifle (crate)",
-    "category": "Light Arms",
-    "threshold": 40
-  },
-  "24": {
-    "name": "7.62mm",
-    "category": "Light Arms",
-    "threshold": 40
-  },
-  "24C": {
-    "name": "7.62mm (crate)",
-    "category": "Light Arms",
-    "threshold": 40
-  },
-  "31": {
-    "name": "9mm ",
-    "category": "Light Arms",
-    "threshold": 40
-  },
-  "31C": {
-    "name": "9mm (crate)",
-    "category": "Light Arms",
-    "threshold": 40
-  },
-  "36": {
-    "name": "20mm",
-    "category": "Light Arms ",
-    "threshold": 0
-  },
-  "36C": {
-    "name": "20mm (crate)",
-    "category": "Light Arms",
-    "threshold": 40
-  },
-  "66": {
-    "name": "Binoculars",
-    "category": "Infantry Equipment ",
-    "threshold": 0
-  },
-  "66C": {
-    "name": "Binoculars (crate)",
-    "category": "Infantry Equipment ",
-    "threshold": 0
-  },
-  "72": {
-    "name": "Sledgehammers",
-    "category": "Infantry Equipment ",
-    "threshold": 0
-  },
-  "72C": {
-    "name": "Sledgehammers (crate)",
-    "category": "Infantry Equipment ",
-    "threshold": 0
-  },
-  "76": {
-    "name": "Wrenches",
-    "category": "Infantry Equipment ",
-    "threshold": 0
-  },
-  "76C": {
-    "name": "Wrenches (crate)",
-    "category": "Infantry Equipment ",
-    "threshold": 0
-  },
-  "77": {
-    "name": "Bayonets",
-    "category": "Infantry Equipment ",
-    "threshold": 0
-  },
-  "77C": {
-    "name": "Bayonets (crate)",
-    "category": "Infantry Equipment ",
-    "threshold": 0
-  },
-  "78": {
-    "name": "Gas Masks",
-    "category": "Infantry Equipment ",
-    "threshold": 0
-  },
-  "78C": {
-    "name": "Gas Masks (crate)",
-    "category": "Infantry Equipment ",
-    "threshold": 0
-  },
-  "79": {
-    "name": "Gas Mask Filters",
-    "category": "Infantry Equipment ",
-    "threshold": 0
-  },
-  "79C": {
-    "name": "Gas Mask Filters (crate)",
-    "category": "Infantry Equipment ",
-    "threshold": 0
-  },
-  "80": {
-    "name": "Radios",
-    "category": "Infantry Equipment ",
-    "threshold": 0
-  },
-  "80C": {
-    "name": "Radio (crate)",
-    "category": "Infantry Equipment ",
-    "threshold": 0
-  },
-  "82": {
-    "name": "Bandages",
-    "category": "Medical",
-    "threshold": 15
-  },
-  "82C": {
-    "name": "Bandages (crate)",
-    "category": "Medical",
-    "threshold": 15
-  },
-  "83": {
-    "name": "Medical Kits",
-    "category": "Medical",
-    "threshold": 15
-  },
-  "83C": {
-    "name": "Medical Kits (crate)",
-    "category": "Medical",
-    "threshold": 15
-  },
-  "84": {
-    "name": "Trauma Kits",
-    "category": "Medical",
-    "threshold": 15
-  },
-  "84C": {
-    "name": "Trauma Kits (crate)",
-    "category": "Medical",
-    "threshold": 15
-  },
-  "85": {
-    "name": "Blood Plasma",
-    "category": "Medical",
-    "threshold": 15
-  },
-  "85C": {
-    "name": "Blood Plasma (crate)",
-    "category": "Medical",
-    "threshold": 15
-  },
-  "86": {
-    "name": "Soldier Supplies",
-    "category": "Medical",
-    "threshold": 15
-  },
-  "86C": {
-    "name": "Soldier Supplies (crate)",
-    "category": "Medical",
-    "threshold": 15
-  },
-  "87": {
-    "name": "Diesel",
+  "vanilla_Aluminum": {
+    "name": "Aluminum",
     "category": "Supplies",
     "threshold": 20
   },
-  "87C": {
-    "name": "Diesel (crate)",
-    "category": "Supplies",
-    "threshold": 20
-  },
-  "88": {
-    "name": "Petrol",
-    "category": "Supplies",
-    "threshold": 20
-  },
-  "88C": {
-    "name": "Petrol (crate)",
-    "category": "Supplies",
-    "threshold": 20
-  },
-  "89": {
+  "vanilla_AluminumA": {
     "name": "Aluminum Alloy",
     "category": "Materials",
     "threshold": 30
   },
-  "89C": {
+  "vanilla_AluminumACrate": {
     "name": "Aluminum Alloy (crate)",
     "category": "Materials",
     "threshold": 30
   },
-  "91": {
+  "vanilla_AmbulanceC": {
+    "name": "R-12 - \u201cSalus\u201d Ambulance",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_AmbulanceCCrate": {
+    "name": "R-12 - \u201cSalus\u201d Ambulance (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_AmbulanceFlameC": {
+    "name": "R-12b - \u201cSalva\u201d Flame Truck",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_AmbulanceFlameCCrate": {
+    "name": "R-12b - \u201cSalva\u201d Flame Truck (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_AmbulanceFlameW": {
+    "name": "Dunne Dousing Engine 3r",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_AmbulanceFlameWCrate": {
+    "name": "Dunne Dousing Engine 3r (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_AmbulanceW": {
+    "name": "Dunne Responder 3e",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_AmbulanceWCrate": {
+    "name": "Dunne Responder 3e (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_AmmoUniformW": {
+    "name": "Specialist\u2019s Overcoat",
+    "category": "Uniforms",
+    "threshold": 10
+  },
+  "vanilla_AmmoUniformWCrate": {
+    "name": "Specialist\u2019s Overcoat (crate)",
+    "category": "Uniforms",
+    "threshold": 10
+  },
+  "vanilla_ArmoredCar2LargeW": {
+    "name": "O\u2019Brien V.101 Freeman",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_ArmoredCar2LargeWCrate": {
+    "name": "O\u2019Brien V.101 Freeman (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_ArmoredCar2MultiW": {
+    "name": "O\u2019Brien v.200 Squire",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_ArmoredCar2MultiWCrate": {
+    "name": "O\u2019Brien v.200 Squire (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_ArmoredCar2TwinW": {
+    "name": "O\u2019Brien V.190 Knave",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_ArmoredCar2TwinWCrate": {
+    "name": "O\u2019Brien V.190 Knave (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_ArmoredCarATW": {
+    "name": "O\u2019Brien V.113 Gravekeeper",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_ArmoredCarATWCrate": {
+    "name": "O\u2019Brien V.113 Gravekeeper (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_ArmoredCarC": {
+    "name": "T3 \u201cXiphos\u201d",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_ArmoredCarCCrate": {
+    "name": "T3 \u201cXiphos\u201d (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_ArmoredCarFlameW": {
+    "name": "O\u2019Brien V.130 Wild Jack",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_ArmoredCarFlameWCrate": {
+    "name": "O\u2019Brien V.130 Wild Jack (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_ArmoredCarMobilityW": {
+    "name": "O\u2019Brien V.121 Highlander",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_ArmoredCarMobilityWCrate": {
+    "name": "O\u2019Brien V.121 Highlander (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_ArmoredCarOffensiveC": {
+    "name": "T5 \u201cPercutio\u201d",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_ArmoredCarOffensiveCCrate": {
+    "name": "T5 \u201cPercutio\u201d (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_ArmoredCarTwinC": {
+    "name": "T8 \u201cGemini\u201d",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_ArmoredCarTwinCCrate": {
+    "name": "T8 \u201cGemini\u201d (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_ArmoredCarW": {
+    "name": "O\u2019Brien V.110",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_ArmoredCarWCrate": {
+    "name": "O\u2019Brien V.110 (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_ArmourUniformC": {
+    "name": "Velian Flak Vest",
+    "category": "Uniforms",
+    "threshold": 10
+  },
+  "vanilla_ArmourUniformCCrate": {
+    "name": "Velian Flak Vest (crate)",
+    "category": "Uniforms",
+    "threshold": 10
+  },
+  "vanilla_ArmourUniformW": {
+    "name": "Gunner\u2019s Breastplate",
+    "category": "Uniforms",
+    "threshold": 10
+  },
+  "vanilla_ArmourUniformWCrate": {
+    "name": "Gunner\u2019s Breastplate (crate)",
+    "category": "Uniforms",
+    "threshold": 10
+  },
+  "vanilla_AssaultRifleAmmo": {
+    "name": "7.92mm",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_AssaultRifleAmmoCrate": {
+    "name": "7.92mm (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_AssaultRifleC": {
+    "name": "Catara mo.II",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_AssaultRifleCCrate": {
+    "name": "Catara mo.II (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_AssaultRifleHeavyC": {
+    "name": "\u201cDusk\u201d ce.III",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_AssaultRifleHeavyCCrate": {
+    "name": "\u201cDusk\u201d ce.III (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_AssaultRifleHeavyW": {
+    "name": "Booker Storm Rifle Model 838",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_AssaultRifleHeavyWCrate": {
+    "name": "Booker Storm Rifle Model 838 (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_AssaultRifleW": {
+    "name": "Aalto Storm Rifle 24",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_AssaultRifleWCrate": {
+    "name": "Aalto Storm Rifle 24 (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_ATAmmo": {
+    "name": "68mm",
+    "category": "Heavy Ammunition",
+    "threshold": 30
+  },
+  "vanilla_ATAmmoCrate": {
+    "name": "68mm (crate)",
+    "category": "Heavy Ammunition",
+    "threshold": 30
+  },
+  "vanilla_ATGrenadeW": {
+    "name": "BF5 White Ash Flask Grenade",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_ATGrenadeWCrate": {
+    "name": "BF5 White Ash Flask Grenade (crate)",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_ATLargeAmmo": {
+    "name": "94.5mm",
+    "category": "Heavy Ammunition",
+    "threshold": 30
+  },
+  "vanilla_ATLargeAmmoCrate": {
+    "name": "94.5mm (crate)",
+    "category": "Heavy Ammunition",
+    "threshold": 30
+  },
+  "vanilla_ATLaunchedGrenadeW": {
+    "name": "B2 Varsi Anti-Tank Grenade",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_ATLaunchedGrenadeWCrate": {
+    "name": "B2 Varsi Anti-Tank Grenade (crate)",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_ATRifleAmmo": {
+    "name": "20mm",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_ATRifleAmmoCrate": {
+    "name": "20mm (crate)",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_ATRifleAssaultW": {
+    "name": "228 Satterley Heavy Storm Rifle",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_ATRifleAssaultWCrate": {
+    "name": "228 Satterley Heavy Storm Rifle (crate)",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_ATRifleAutomaticW": {
+    "name": "Booker Greyhound Model 910",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_ATRifleAutomaticWCrate": {
+    "name": "Booker Greyhound Model 910 (crate)",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_ATRifleLightC": {
+    "name": "\u201cDawn\u201d Ve.II",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_ATRifleLightCCrate": {
+    "name": "\u201cDawn\u201d Ve.II (crate)",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_ATRifleSniperC": {
+    "name": "\u201cQuickhatch\u201d Rt.I",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_ATRifleSniperCCrate": {
+    "name": "\u201cQuickhatch\u201d Rt.I (crate)",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_ATRifleTC": {
+    "name": "\u201cTyphon\u201d ra.XII",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_ATRifleTCCrate": {
+    "name": "\u201cTyphon\u201d ra.XII (crate)",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_ATRifleW": {
+    "name": "20 Neville Anti-Tank Rifle",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_ATRifleWCrate": {
+    "name": "20 Neville Anti-Tank Rifle (crate)",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_ATRPGAmmo": {
+    "name": "AP/RPG",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_ATRPGAmmoCrate": {
+    "name": "AP/RPG (crate)",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_ATRPGC": {
+    "name": "Venom c.II 35",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_ATRPGCCrate": {
+    "name": "Venom c.II 35 (crate)",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_ATRPGHeavyC": {
+    "name": "Bane 45",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_ATRPGHeavyCCrate": {
+    "name": "Bane 45 (crate)",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_ATRPGHeavyW": {
+    "name": "Carnyx Anti-Tank Rocket Launcher",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_ATRPGHeavyWCrate": {
+    "name": "Carnyx Anti-Tank Rocket Launcher (crate)",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_ATRPGIndirectAmmo": {
+    "name": "ARC/RPG",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_ATRPGIndirectAmmoCrate": {
+    "name": "ARC/RPG (crate)",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_ATRPGLightC": {
+    "name": "Ignifist 30",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_ATRPGLightCCrate": {
+    "name": "Ignifist 30 (crate)",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_ATRPGTW": {
+    "name": "Mounted Bonesaw MK.3",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_ATRPGTWCrate": {
+    "name": "Mounted Bonesaw MK.3 (crate)",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_ATRPGW": {
+    "name": "Bonesaw MK.3",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_ATRPGWCrate": {
+    "name": "Bonesaw MK.3 (crate)",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_Bandages": {
+    "name": "Bandages",
+    "category": "Medical",
+    "threshold": 15
+  },
+  "vanilla_BandagesCrate": {
+    "name": "Bandages (crate)",
+    "category": "Medical",
+    "threshold": 15
+  },
+  "vanilla_BarbedWireMaterials": {
+    "name": "Barbed Wire",
+    "category": "Utility",
+    "threshold": 20
+  },
+  "vanilla_BarbedWireMaterialsCrate": {
+    "name": "Barbed Wire (crate)",
+    "category": "Utility",
+    "threshold": 20
+  },
+  "vanilla_Barge": {
+    "name": "BMS - Aquatipper",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_BargeCrate": {
+    "name": "BMS - Aquatipper (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_BattleTankAmmo": {
+    "name": "75mm",
+    "category": "Heavy Ammunition",
+    "threshold": 30
+  },
+  "vanilla_BattleTankAmmoCrate": {
+    "name": "75mm (crate)",
+    "category": "Heavy Ammunition",
+    "threshold": 30
+  },
+  "vanilla_BattleTankATC": {
+    "name": "Lance-25 \u201cHasta\u201d",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_BattleTankATCCrate": {
+    "name": "Lance-25 \u201cHasta\u201d (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_BattleTankC": {
+    "name": "Lance-36",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_BattleTankCCrate": {
+    "name": "Lance-36 (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_BattleTankDefensiveW": {
+    "name": "Flood Juggernaut Mk. VII",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_BattleTankDefensiveWCrate": {
+    "name": "Flood Juggernaut Mk. VII (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_BattleTankHeavyArtilleryC": {
+    "name": "Lance-46 \u201cSarissa\u201d",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_BattleTankHeavyArtilleryCCrate": {
+    "name": "Lance-46 \u201cSarissa\u201d (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_BattleTankHeavyArtilleryW": {
+    "name": "Flood Mk. IX Stain",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_BattleTankHeavyArtilleryWCrate": {
+    "name": "Flood Mk. IX Stain (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_BattleTankW": {
+    "name": "Flood Mk. I",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_BattleTankWCrate": {
+    "name": "Flood Mk. I (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_Bayonet": {
+    "name": "Buckhorn CCQ-18",
+    "category": "Utility",
+    "threshold": 20
+  },
+  "vanilla_BayonetCrate": {
+    "name": "Buckhorn CCQ-18 (crate)",
+    "category": "Utility",
+    "threshold": 20
+  },
+  "vanilla_Bicycle": {
+    "name": "Blumfield LK205",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_BicycleCrate": {
+    "name": "Blumfield LK205 (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_Binoculars": {
+    "name": "Binoculars",
+    "category": "Utility",
+    "threshold": 20
+  },
+  "vanilla_BinocularsCrate": {
+    "name": "Binoculars (crate)",
+    "category": "Utility",
+    "threshold": 20
+  },
+  "vanilla_BloodPlasma": {
+    "name": "Blood Plasma",
+    "category": "Medical",
+    "threshold": 15
+  },
+  "vanilla_BloodPlasmaCrate": {
+    "name": "Blood Plasma (crate)",
+    "category": "Medical",
+    "threshold": 15
+  },
+  "vanilla_BusC": {
+    "name": "R-15 - \u201cChariot\u201d",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_BusCCrate": {
+    "name": "R-15 - \u201cChariot\u201d (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_BusW": {
+    "name": "Dunne Caravaner 2f",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_BusWCrate": {
+    "name": "Dunne Caravaner 2f (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_Cloth": {
     "name": "Basic Materials",
     "category": "Materials",
     "threshold": 30
   },
-  "91C": {
+  "vanilla_ClothCrate": {
     "name": "Basic Materials (crate)",
     "category": "Materials",
     "threshold": 30
   },
-  "92": {
-    "name": "Explosive Materials",
+  "vanilla_Coal": {
+    "name": "Coal",
+    "category": "Supplies",
+    "threshold": 20
+  },
+  "vanilla_Components": {
+    "name": "Components",
+    "category": "Supplies",
+    "threshold": 20
+  },
+  "vanilla_Concrete": {
+    "name": "Concrete Materials",
     "category": "Materials",
     "threshold": 30
   },
-  "92C": {
-    "name": "Explosive Materials (crate)",
+  "vanilla_Construction": {
+    "name": "BMS - Universal Assembly Rig",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_ConstructionCrate": {
+    "name": "BMS - Universal Assembly Rig (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_ConstructionUtility": {
+    "name": "BMS - Fabricator",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_ConstructionUtilityCrate": {
+    "name": "BMS - Fabricator (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_Copper": {
+    "name": "Copper",
+    "category": "Supplies",
+    "threshold": 20
+  },
+  "vanilla_CopperA": {
+    "name": "Copper Alloy",
     "category": "Materials",
     "threshold": 30
   },
-  "93": {
-    "name": "Maintenance Supplies",
-    "category": "Maintenance",
+  "vanilla_CopperACrate": {
+    "name": "Copper Alloy (crate)",
+    "category": "Materials",
+    "threshold": 30
+  },
+  "vanilla_Crane": {
+    "name": "BMS - Class 2 Mobile Auto-Crane",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_CraneCrate": {
+    "name": "BMS - Class 2 Mobile Auto-Crane (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_DemolitionRocketAmmo": {
+    "name": "Shatter Missile",
+    "category": "Heavy Ammunition",
+    "threshold": 30
+  },
+  "vanilla_DemolitionRocketAmmoCrate": {
+    "name": "Shatter Missile (crate)",
+    "category": "Heavy Ammunition",
+    "threshold": 30
+  },
+  "vanilla_DepthChargeAmmo": {
+    "name": "Model-7 \u201cEvie\u201d",
+    "category": "Heavy Ammunition",
+    "threshold": 30
+  },
+  "vanilla_DepthChargeAmmoCrate": {
+    "name": "Model-7 \u201cEvie\u201d (crate)",
+    "category": "Heavy Ammunition",
+    "threshold": 30
+  },
+  "vanilla_DestroyerTankFlameW": {
+    "name": "Noble Firebrand Mk. XVII",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_DestroyerTankFlameWCrate": {
+    "name": "Noble Firebrand Mk. XVII (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_DestroyerTankW": {
+    "name": "Noble Widow MK. XIV",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_DestroyerTankWCrate": {
+    "name": "Noble Widow MK. XIV (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_Diesel": {
+    "name": "Diesel",
+    "category": "Supplies",
+    "threshold": 20
+  },
+  "vanilla_DieselCrate": {
+    "name": "Diesel (crate)",
+    "category": "Supplies",
+    "threshold": 20
+  },
+  "vanilla_EngineerUniformC": {
+    "name": "Fabri Rucksack",
+    "category": "Uniforms",
     "threshold": 10
   },
-  "93C": {
-    "name": "Maintenance Supplies (crate)",
-    "category": "Maintenance",
+  "vanilla_EngineerUniformCCrate": {
+    "name": "Fabri Rucksack (crate)",
+    "category": "Uniforms",
     "threshold": 10
   },
-  "94": {
-    "name": "High Explosive Materials",
+  "vanilla_EngineerUniformW": {
+    "name": "Sapper Gear",
+    "category": "Uniforms",
+    "threshold": 10
+  },
+  "vanilla_EngineerUniformWCrate": {
+    "name": "Sapper Gear (crate)",
+    "category": "Uniforms",
+    "threshold": 10
+  },
+  "vanilla_Explosive": {
+    "name": "Explosive Powder",
     "category": "Materials",
     "threshold": 30
   },
-  "94C": {
-    "name": "High Explosive Materials (crate)",
+  "vanilla_ExplosiveCrate": {
+    "name": "Explosive Powder (crate)",
     "category": "Materials",
     "threshold": 30
   },
-  "95": {
+  "vanilla_ExplosiveLightC": {
+    "name": "Hydra\u2019s Whisper",
+    "category": "Utility",
+    "threshold": 20
+  },
+  "vanilla_ExplosiveLightCCrate": {
+    "name": "Hydra\u2019s Whisper (crate)",
+    "category": "Utility",
+    "threshold": 20
+  },
+  "vanilla_ExplosiveTripod": {
+    "name": "Havoc Charge",
+    "category": "Utility",
+    "threshold": 20
+  },
+  "vanilla_ExplosiveTripodCrate": {
+    "name": "Havoc Charge (crate)",
+    "category": "Utility",
+    "threshold": 20
+  },
+  "vanilla_FacilityCoal1": {
+    "name": "Coke",
+    "category": "Supplies",
+    "threshold": 20
+  },
+  "vanilla_FacilityComponents1": {
+    "name": "Damaged Components",
+    "category": "Supplies",
+    "threshold": 20
+  },
+  "vanilla_FacilityMaterials1": {
+    "name": "Construction Materials",
+    "category": "Materials",
+    "threshold": 30
+  },
+  "vanilla_FacilityMaterials1Crate": {
+    "name": "Construction Materials (crate)",
+    "category": "Materials",
+    "threshold": 30
+  },
+  "vanilla_FacilityMaterials10": {
+    "name": "Unstable Substances",
+    "category": "Supplies",
+    "threshold": 20
+  },
+  "vanilla_FacilityMaterials10Crate": {
+    "name": "Unstable Substances (crate)",
+    "category": "Supplies",
+    "threshold": 20
+  },
+  "vanilla_FacilityMaterials11": {
+    "name": "Thermal Shielding",
+    "category": "Supplies",
+    "threshold": 20
+  },
+  "vanilla_FacilityMaterials11Crate": {
+    "name": "Thermal Shielding (crate)",
+    "category": "Supplies",
+    "threshold": 20
+  },
+  "vanilla_FacilityMaterials2": {
+    "name": "Processed Construction Materials",
+    "category": "Materials",
+    "threshold": 30
+  },
+  "vanilla_FacilityMaterials2Crate": {
+    "name": "Processed Construction Materials (crate)",
+    "category": "Materials",
+    "threshold": 30
+  },
+  "vanilla_FacilityMaterials3": {
+    "name": "Steel Construction Materials",
+    "category": "Materials",
+    "threshold": 30
+  },
+  "vanilla_FacilityMaterials3Crate": {
+    "name": "Steel Construction Materials (crate)",
+    "category": "Materials",
+    "threshold": 30
+  },
+  "vanilla_FacilityMaterials4": {
+    "name": "Assembly Materials I",
+    "category": "Materials",
+    "threshold": 30
+  },
+  "vanilla_FacilityMaterials4Crate": {
+    "name": "Assembly Materials I (crate)",
+    "category": "Materials",
+    "threshold": 30
+  },
+  "vanilla_FacilityMaterials5": {
+    "name": "Assembly Materials II",
+    "category": "Materials",
+    "threshold": 30
+  },
+  "vanilla_FacilityMaterials5Crate": {
+    "name": "Assembly Materials II (crate)",
+    "category": "Materials",
+    "threshold": 30
+  },
+  "vanilla_FacilityMaterials6": {
+    "name": "Assembly Materials III",
+    "category": "Materials",
+    "threshold": 30
+  },
+  "vanilla_FacilityMaterials6Crate": {
+    "name": "Assembly Materials III (crate)",
+    "category": "Materials",
+    "threshold": 30
+  },
+  "vanilla_FacilityMaterials7": {
+    "name": "Assembly Materials IV",
+    "category": "Materials",
+    "threshold": 30
+  },
+  "vanilla_FacilityMaterials7Crate": {
+    "name": "Assembly Materials IV (crate)",
+    "category": "Materials",
+    "threshold": 30
+  },
+  "vanilla_FacilityMaterials8": {
+    "name": "Assembly Materials V",
+    "category": "Materials",
+    "threshold": 30
+  },
+  "vanilla_FacilityMaterials8Crate": {
+    "name": "Assembly Materials V (crate)",
+    "category": "Materials",
+    "threshold": 30
+  },
+  "vanilla_FacilityMaterials9": {
+    "name": "Rare Alloys",
+    "category": "Materials",
+    "threshold": 30
+  },
+  "vanilla_FacilityMaterials9Crate": {
+    "name": "Rare Alloys (crate)",
+    "category": "Materials",
+    "threshold": 30
+  },
+  "vanilla_FacilityOil1": {
+    "name": "Heavy Oil",
+    "category": "Supplies",
+    "threshold": 20
+  },
+  "vanilla_FacilityOil1Crate": {
+    "name": "Heavy Oil (crate)",
+    "category": "Supplies",
+    "threshold": 20
+  },
+  "vanilla_FacilityOil2": {
+    "name": "Enriched Oil",
+    "category": "Supplies",
+    "threshold": 20
+  },
+  "vanilla_FacilityOil2Crate": {
+    "name": "Enriched Oil (crate)",
+    "category": "Supplies",
+    "threshold": 20
+  },
+  "vanilla_FieldAT2C": {
+    "name": "GA6 \u201cCestus\u201d",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_FieldAT2CCrate": {
+    "name": "GA6 \u201cCestus\u201d (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_FieldAT2W": {
+    "name": "Duncan\u2019s Coin 20mm",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_FieldAT2WCrate": {
+    "name": "Duncan\u2019s Coin 20mm (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_FieldATC": {
+    "name": "AA-2 \"Battering Ram\"",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_FieldATCCrate": {
+    "name": "AA-2 \"Battering Ram\" (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_FieldATDamageW": {
+    "name": "Balfour Rampart 68mm",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_FieldATDamageWCrate": {
+    "name": "Balfour Rampart 68mm (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_FieldATW": {
+    "name": "Collins Cannon 68mm",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_FieldATWCrate": {
+    "name": "Collins Cannon 68mm (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_FieldCannonDamageC": {
+    "name": "40-45 \u201cSmelter\u201d",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_FieldCannonDamageCCrate": {
+    "name": "40-45 \u201cSmelter\u201d (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_FieldCannonW": {
+    "name": "Balfour Wolfhound 40mm",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_FieldCannonWCrate": {
+    "name": "Balfour Wolfhound 40mm (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_FieldMGC": {
+    "name": "G40 \u201cSagittarii\u201d",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_FieldMGCCrate": {
+    "name": "G40 \u201cSagittarii\u201d (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_FieldMGW": {
+    "name": "Swallowtail 988/127-2",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_FieldMGWCrate": {
+    "name": "Swallowtail 988/127-2 (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_FieldMortarC": {
+    "name": "30-250 \u201cTisiphone\u201d Field Cannon",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_FieldMortarCCrate": {
+    "name": "30-250 \u201cTisiphone\u201d Field Cannon (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_FieldMortarW": {
+    "name": "Balfour Falconer 250mm",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_FieldMortarWCrate": {
+    "name": "Balfour Falconer 250mm (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_FireRocketAmmo": {
+    "name": "4C-Fire Rocket",
+    "category": "Heavy Ammunition",
+    "threshold": 30
+  },
+  "vanilla_FireRocketAmmoCrate": {
+    "name": "4C-Fire Rocket (crate)",
+    "category": "Heavy Ammunition",
+    "threshold": 30
+  },
+  "vanilla_FirstAidKit": {
+    "name": "First Aid Kit",
+    "category": "Medical",
+    "threshold": 15
+  },
+  "vanilla_FirstAidKitCrate": {
+    "name": "First Aid Kit (crate)",
+    "category": "Medical",
+    "threshold": 15
+  },
+  "vanilla_FlameAmmo": {
+    "name": "Flame Ammo",
+    "category": "Heavy Ammunition",
+    "threshold": 30
+  },
+  "vanilla_FlameAmmoCrate": {
+    "name": "Flame Ammo (crate)",
+    "category": "Heavy Ammunition",
+    "threshold": 30
+  },
+  "vanilla_FlameBackpackC": {
+    "name": "\u201cMolten Wind\u201d v.II Ammo",
+    "category": "Utility",
+    "threshold": 20
+  },
+  "vanilla_FlameBackpackCCrate": {
+    "name": "\u201cMolten Wind\u201d v.II Ammo (crate)",
+    "category": "Utility",
+    "threshold": 20
+  },
+  "vanilla_FlameBackpackW": {
+    "name": "Willow's Bane Ammo",
+    "category": "Utility",
+    "threshold": 20
+  },
+  "vanilla_FlameBackpackWCrate": {
+    "name": "Willow's Bane Ammo (crate)",
+    "category": "Utility",
+    "threshold": 20
+  },
+  "vanilla_FlameTorchC": {
+    "name": "\u201cMolten Wind\u201d v.II Flame Torch",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_FlameTorchCCrate": {
+    "name": "\u201cMolten Wind\u201d v.II Flame Torch (crate)",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_FlameTorchW": {
+    "name": "Willow\u2019s Bane Model 845",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_FlameTorchWCrate": {
+    "name": "Willow\u2019s Bane Model 845 (crate)",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_FlatbedTruck": {
+    "name": "BMS - Packmule Flatbed",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_FlatbedTruckCrate": {
+    "name": "BMS - Packmule Flatbed (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_Freighter": {
+    "name": "BMS - Ironship",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_FreighterCrate": {
+    "name": "BMS - Ironship (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_GasMask": {
+    "name": "Gas Mask",
+    "category": "Utility",
+    "threshold": 20
+  },
+  "vanilla_GasMaskCrate": {
+    "name": "Gas Mask (crate)",
+    "category": "Utility",
+    "threshold": 20
+  },
+  "vanilla_GasMaskFilter": {
+    "name": "Gas Mask Filter",
+    "category": "Utility",
+    "threshold": 20
+  },
+  "vanilla_GasMaskFilterCrate": {
+    "name": "Gas Mask Filter (crate)",
+    "category": "Utility",
+    "threshold": 20
+  },
+  "vanilla_GreenAsh": {
+    "name": "Green Ash Grenade",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_GreenAshCrate": {
+    "name": "Green Ash Grenade (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_GrenadeAdapter": {
+    "name": "The Ospreay",
+    "category": "Utility",
+    "threshold": 20
+  },
+  "vanilla_GrenadeAdapterCrate": {
+    "name": "The Ospreay (crate)",
+    "category": "Utility",
+    "threshold": 20
+  },
+  "vanilla_GrenadeC": {
+    "name": "Bomastone Grenade",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_GrenadeCCrate": {
+    "name": "Bomastone Grenade (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_GrenadeLauncherC": {
+    "name": "KLG901-2 Lunaire F",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_GrenadeLauncherCCrate": {
+    "name": "KLG901-2 Lunaire F (crate)",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_GrenadeLauncherTC": {
+    "name": "Mounted Fissura gd.I",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_GrenadeLauncherTCCrate": {
+    "name": "Mounted Fissura gd.I (crate)",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_GrenadeUniformC": {
+    "name": "Grenadier\u2019s Baldric",
+    "category": "Uniforms",
+    "threshold": 10
+  },
+  "vanilla_GrenadeUniformCCrate": {
+    "name": "Grenadier\u2019s Baldric (crate)",
+    "category": "Uniforms",
+    "threshold": 10
+  },
+  "vanilla_GrenadeW": {
+    "name": "A3 Harpa Fragmentation Grenade",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_GrenadeWCrate": {
+    "name": "A3 Harpa Fragmentation Grenade (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_GroundMaterials": {
+    "name": "Gravel",
+    "category": "Supplies",
+    "threshold": 20
+  },
+  "vanilla_GroundMaterialsCrate": {
+    "name": "Gravel (crate)",
+    "category": "Supplies",
+    "threshold": 20
+  },
+  "vanilla_GunboatC": {
+    "name": "Type C - \u201cCharon\u201d",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_GunboatCCrate": {
+    "name": "Type C - \u201cCharon\u201d (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_GunboatW": {
+    "name": "74b-1 Ronan Gunship",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_GunboatWCrate": {
+    "name": "74b-1 Ronan Gunship (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_HalfTrackArtilleryC": {
+    "name": "HH-d \u201cPeltast\u201d",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_HalfTrackArtilleryCCrate": {
+    "name": "HH-d \u201cPeltast\u201d (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_HalfTrackC": {
+    "name": "HH-a \u201cJavelin\u201d",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_HalfTrackCCrate": {
+    "name": "HH-a \u201cJavelin\u201d (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_HalfTrackDefensiveC": {
+    "name": "HH-b \u201cHoplite\u201d",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_HalfTrackDefensiveCCrate": {
+    "name": "HH-b \u201cHoplite\u201d (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_HalftrackMultiW": {
+    "name": "Niska-Rycker Mk. IX Skycaller",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_HalftrackMultiWCrate": {
+    "name": "Niska-Rycker Mk. IX Skycaller (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_HalfTrackOffensiveW": {
+    "name": "Niska Mk. II Blinder",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_HalfTrackOffensiveWCrate": {
+    "name": "Niska Mk. II Blinder (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_HalfTrackTwinW": {
+    "name": "Niska Mk. III Scar Twin",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_HalfTrackTwinWCrate": {
+    "name": "Niska Mk. III Scar Twin (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_HalfTrackW": {
+    "name": "Niska Mk. I Gun Motor Carriage",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_HalfTrackWCrate": {
+    "name": "Niska Mk. I Gun Motor Carriage (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_Harvester": {
+    "name": "BMS - Scrap Hauler",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_HarvesterCrate": {
+    "name": "BMS - Scrap Hauler (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_HeavyArtilleryAmmo": {
+    "name": "150mm",
+    "category": "Heavy Ammunition",
+    "threshold": 30
+  },
+  "vanilla_HeavyArtilleryAmmoCrate": {
+    "name": "150mm (crate)",
+    "category": "Heavy Ammunition",
+    "threshold": 30
+  },
+  "vanilla_HeavyExplosive": {
+    "name": "Heavy Explosive Powder",
+    "category": "Materials",
+    "threshold": 30
+  },
+  "vanilla_HeavyExplosiveCrate": {
+    "name": "Heavy Explosive Powder (crate)",
+    "category": "Materials",
+    "threshold": 30
+  },
+  "vanilla_HeavyTruckC": {
+    "name": "AU-A150 Taurine Rigger",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_HeavyTruckCCrate": {
+    "name": "AU-A150 Taurine Rigger (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_HeavyTruckW": {
+    "name": "Cnute Cliffwrest",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_HeavyTruckWCrate": {
+    "name": "Cnute Cliffwrest (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_HEGrenade": {
+    "name": "Mammon 91-b",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_HEGrenadeCrate": {
+    "name": "Mammon 91-b (crate)",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_HELaunchedGrenade": {
+    "name": "Tremola Grenade GPb-1",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_HELaunchedGrenadeCrate": {
+    "name": "Tremola Grenade GPb-1 (crate)",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_HERocketAmmo": {
+    "name": "3C-High Explosive Rocket",
+    "category": "Heavy Ammunition",
+    "threshold": 30
+  },
+  "vanilla_HERocketAmmoCrate": {
+    "name": "3C-High Explosive Rocket (crate)",
+    "category": "Heavy Ammunition",
+    "threshold": 30
+  },
+  "vanilla_InfantryMine": {
+    "name": "Crow\u2019s Foot Mine",
+    "category": "Utility",
+    "threshold": 20
+  },
+  "vanilla_InfantryMineCrate": {
+    "name": "Crow\u2019s Foot Mine (crate)",
+    "category": "Utility",
+    "threshold": 20
+  },
+  "vanilla_Iron": {
+    "name": "Iron",
+    "category": "Supplies",
+    "threshold": 20
+  },
+  "vanilla_IronA": {
     "name": "Iron Alloy",
     "category": "Materials",
     "threshold": 30
   },
-  "95C": {
+  "vanilla_IronACrate": {
     "name": "Iron Alloy (crate)",
     "category": "Materials",
     "threshold": 30
   },
-  "96": {
-    "name": "Refined Materials",
+  "vanilla_ISGTC": {
+    "name": "Daucus isg.III",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_ISGTCCrate": {
+    "name": "Daucus isg.III (crate)",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_LandingCraftC": {
+    "name": "AB-8 \u201cAcheron\u201d",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LandingCraftCCrate": {
+    "name": "AB-8 \u201cAcheron\u201d (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LandingCraftOffensiveC": {
+    "name": "AB-11 \u201cDoru\u201d",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LandingCraftOffensiveCCrate": {
+    "name": "AB-11 \u201cDoru\u201d (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LandingCraftW": {
+    "name": "Mulloy LPC",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LandingCraftWCrate": {
+    "name": "Mulloy LPC (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LandingShipC": {
+    "name": "Interceptor PA-12",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LandingShipCCrate": {
+    "name": "Interceptor PA-12 (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LandingShipW": {
+    "name": "MacConmara Shorerunner",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LandingShipWCrate": {
+    "name": "MacConmara Shorerunner (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LargeCrane": {
+    "name": "BMS - Overseer Sky-Hauler",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LargeCraneCrate": {
+    "name": "BMS - Overseer Sky-Hauler (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LargeFieldATC": {
+    "name": "945g \u201cStygian Bolt\u201d",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LargeFieldATCCrate": {
+    "name": "945g \u201cStygian Bolt\u201d (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LargeFieldCannonW": {
+    "name": "Balfour Stockade 75mm",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LargeFieldCannonWCrate": {
+    "name": "Balfour Stockade 75mm (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LargeFieldLightArtilleryC": {
+    "name": "120-68 \u201cKoronides\u201d Field Gun",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LargeFieldLightArtilleryCCrate": {
+    "name": "120-68 \u201cKoronides\u201d Field Gun (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LargeFieldMortarC": {
+    "name": "35-250 \u201cAlekto\u201d Heavy Cannon",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LargeFieldMortarCCrate": {
+    "name": "35-250 \u201cAlekto\u201d Heavy Cannon (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LargeFieldMultiW": {
+    "name": "Rycker 4/3-F Wasp Nest",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LargeFieldMultiWCrate": {
+    "name": "Rycker 4/3-F Wasp Nest (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LargeShipBaseShip": {
+    "name": "BMS - Longhook",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LargeShipBaseShipCrate": {
+    "name": "BMS - Longhook (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LargeShipBattleshipC": {
+    "name": "Titan",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LargeShipBattleshipCCrate": {
+    "name": "Titan (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LargeShipBattleshipW": {
+    "name": "Callahan",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LargeShipBattleshipWCrate": {
+    "name": "Callahan (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LargeShipDestroyerC": {
+    "name": "Conqueror",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LargeShipDestroyerCCrate": {
+    "name": "Conqueror (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LargeShipDestroyerW": {
+    "name": "Blacksteele",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LargeShipDestroyerWCrate": {
+    "name": "Blacksteele (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LargeShipResourceShip": {
+    "name": "BMS - Bowhead",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LargeShipResourceShipCrate": {
+    "name": "BMS - Bowhead (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LargeShipStorageShip": {
+    "name": "BMS - Bluefin",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LargeShipStorageShipCrate": {
+    "name": "BMS - Bluefin (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LargeShipSubmarineC": {
+    "name": "AC-b \u201cTrident\u201d",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LargeShipSubmarineCCrate": {
+    "name": "AC-b \u201cTrident\u201d (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LargeShipSubmarineW": {
+    "name": "Nakki",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LargeShipSubmarineWCrate": {
+    "name": "Nakki (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LightArtilleryAmmo": {
+    "name": "120mm",
+    "category": "Heavy Ammunition",
+    "threshold": 30
+  },
+  "vanilla_LightArtilleryAmmoCrate": {
+    "name": "120mm (crate)",
+    "category": "Heavy Ammunition",
+    "threshold": 30
+  },
+  "vanilla_LightTank2InfantryC": {
+    "name": "HC-2 \u201cScorpion\u201d",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LightTank2InfantryCCrate": {
+    "name": "HC-2 \u201cScorpion\u201d (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LightTankAmmo": {
+    "name": "40mm",
+    "category": "Heavy Ammunition",
+    "threshold": 30
+  },
+  "vanilla_LightTankAmmoCrate": {
+    "name": "40mm (crate)",
+    "category": "Heavy Ammunition",
+    "threshold": 30
+  },
+  "vanilla_LightTankArtilleryW": {
+    "name": "Devitt-Caine Mk. IV MMR",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LightTankArtilleryWCrate": {
+    "name": "Devitt-Caine Mk. IV MMR (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LightTankC": {
+    "name": "H-5 \"Hatchet\"",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LightTankCCrate": {
+    "name": "H-5 \"Hatchet\" (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LightTankDefensiveW": {
+    "name": "Devitt Ironhide Mk. IV",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LightTankDefensiveWCrate": {
+    "name": "Devitt Ironhide Mk. IV (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LightTankFlameC": {
+    "name": "H-19 \u201cVulcan\u201d",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LightTankFlameCCrate": {
+    "name": "H-19 \u201cVulcan\u201d (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LightTankMobilityC": {
+    "name": "H-8 \u201cKranesca\u201d",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LightTankMobilityCCrate": {
+    "name": "H-8 \u201cKranesca\u201d (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LightTankOffensiveC": {
+    "name": "H-10 \u201cPelekys\u201d",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LightTankOffensiveCCrate": {
+    "name": "H-10 \u201cPelekys\u201d (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LightTankW": {
+    "name": "Devitt Mk. III",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_LightTankWCrate": {
+    "name": "Devitt Mk. III (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_ListeningKit": {
+    "name": "Listening Kit",
+    "category": "Utility",
+    "threshold": 20
+  },
+  "vanilla_ListeningKitCrate": {
+    "name": "Listening Kit (crate)",
+    "category": "Utility",
+    "threshold": 20
+  },
+  "vanilla_LRArtilleryAmmo": {
+    "name": "300mm",
+    "category": "Heavy Ammunition",
+    "threshold": 30
+  },
+  "vanilla_LRArtilleryAmmoCrate": {
+    "name": "300mm (crate)",
+    "category": "Heavy Ammunition",
+    "threshold": 30
+  },
+  "vanilla_MaceW": {
+    "name": "Falias Raiding Club",
+    "category": "Utility",
+    "threshold": 20
+  },
+  "vanilla_MaceWCrate": {
+    "name": "Falias Raiding Club (crate)",
+    "category": "Utility",
+    "threshold": 20
+  },
+  "vanilla_MaintenanceSupplies": {
+    "name": "Maintenance Supplies",
+    "category": "Supplies",
+    "threshold": 20
+  },
+  "vanilla_MaintenanceSuppliesCrate": {
+    "name": "Maintenance Supplies (crate)",
+    "category": "Supplies",
+    "threshold": 20
+  },
+  "vanilla_Mech": {
+    "name": "Centurion MV-2",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_MechCrate": {
+    "name": "Centurion MV-2 (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_MechW": {
+    "name": "Herne QMW 1a Scourge Hunter",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_MechWCrate": {
+    "name": "Herne QMW 1a Scourge Hunter (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_MedicUniformC": {
+    "name": "Medic Fatigues",
+    "category": "Uniforms",
+    "threshold": 10
+  },
+  "vanilla_MedicUniformCCrate": {
+    "name": "Medic Fatigues (crate)",
+    "category": "Uniforms",
+    "threshold": 10
+  },
+  "vanilla_MedicUniformW": {
+    "name": "Physician\u2019s Jacket",
+    "category": "Uniforms",
+    "threshold": 10
+  },
+  "vanilla_MedicUniformWCrate": {
+    "name": "Physician\u2019s Jacket (crate)",
+    "category": "Uniforms",
+    "threshold": 10
+  },
+  "vanilla_MediumTank2C": {
+    "name": "86K-a \u201cBardiche\u201d",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_MediumTank2CCrate": {
+    "name": "86K-a \u201cBardiche\u201d (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_MediumTank2IndirectW": {
+    "name": "Gallagher Thornfall Mk. VI",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_MediumTank2IndirectWCrate": {
+    "name": "Gallagher Thornfall Mk. VI (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_MediumTank2MultiW": {
+    "name": "Gallagher Highwayman Mk. III",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_MediumTank2MultiWCrate": {
+    "name": "Gallagher Highwayman Mk. III (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_MediumTank2RangeW": {
+    "name": "Gallagher Outlaw Mk. II",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_MediumTank2RangeWCrate": {
+    "name": "Gallagher Outlaw Mk. II (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_MediumTank2TwinC": {
+    "name": "86K-c \u201cRanseur\u201d",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_MediumTank2TwinCCrate": {
+    "name": "86K-c \u201cRanseur\u201d (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_MediumTank2W": {
+    "name": "Gallagher Brigand Mk. I",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_MediumTank2WCrate": {
+    "name": "Gallagher Brigand Mk. I (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_MediumTank3C": {
+    "name": "90T-v \u201cNemesis\u201d",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_MediumTank3CCrate": {
+    "name": "90T-v \u201cNemesis\u201d (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_MediumTankATW": {
+    "name": "Silverhand Lordscar - Mk. X",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_MediumTankATWCrate": {
+    "name": "Silverhand Lordscar - Mk. X (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_MediumTankC": {
+    "name": "85K-b \u201cFalchion\u201d",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_MediumTankCCrate": {
+    "name": "85K-b \u201cFalchion\u201d (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_MediumTankLargeC": {
+    "name": "85V-g \"Talos\"",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_MediumTankLargeCCrate": {
+    "name": "85V-g \"Talos\" (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_MediumTankOffensiveC": {
+    "name": "85K-a \u201cSpatha\u201d",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_MediumTankOffensiveCCrate": {
+    "name": "85K-a \u201cSpatha\u201d (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_MediumTankSiegeW": {
+    "name": "Silverhand Chieftain - Mk. VI",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_MediumTankSiegeWCrate": {
+    "name": "Silverhand Chieftain - Mk. VI (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_MediumTankW": {
+    "name": "Silverhand - Mk. IV",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_MediumTankWCrate": {
+    "name": "Silverhand - Mk. IV (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_Metal": {
+    "name": "Salvage",
+    "category": "Supplies",
+    "threshold": 20
+  },
+  "vanilla_MetalBeamMaterials": {
+    "name": "Metal Beam",
+    "category": "Utility",
+    "threshold": 20
+  },
+  "vanilla_MetalBeamMaterialsCrate": {
+    "name": "Metal Beam (crate)",
+    "category": "Utility",
+    "threshold": 20
+  },
+  "vanilla_MGAmmo": {
+    "name": "12.7mm",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_MGAmmoCrate": {
+    "name": "12.7mm (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_MGC": {
+    "name": "KRN886-127 Gast Machine Gun",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_MGCCrate": {
+    "name": "KRN886-127 Gast Machine Gun (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_MGTC": {
+    "name": "Lamentum mm.IV",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_MGTCCrate": {
+    "name": "Lamentum mm.IV (crate)",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_MGTW": {
+    "name": "Malone Ratcatcher MK.1",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_MGTWCrate": {
+    "name": "Malone Ratcatcher MK.1 (crate)",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_MGW": {
+    "name": "Malone MK.2",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_MGWCrate": {
+    "name": "Malone MK.2 (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_MiniTankAmmo": {
+    "name": "30mm",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_MiniTankAmmoCrate": {
+    "name": "30mm (crate)",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_Mortar": {
+    "name": "Cremari Mortar",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_MortarCrate": {
+    "name": "Cremari Mortar (crate)",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_MortarAmmo": {
+    "name": "Mortar Shell",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_MortarAmmoCrate": {
+    "name": "Mortar Shell (crate)",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_MortarAmmoFL": {
+    "name": "Flare Mortar Shell",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_MortarAmmoFLCrate": {
+    "name": "Flare Mortar Shell (crate)",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_MortarAmmoFlame": {
+    "name": "Incendiary Mortar Shell",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_MortarAmmoFlameCrate": {
+    "name": "Incendiary Mortar Shell (crate)",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_MortarAmmoSH": {
+    "name": "Shrapnel Mortar Shell",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_MortarAmmoSHCrate": {
+    "name": "Shrapnel Mortar Shell (crate)",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_MortarTankAmmo": {
+    "name": "250mm \"Purity\" Shell",
+    "category": "Heavy Ammunition",
+    "threshold": 30
+  },
+  "vanilla_MortarTankAmmoCrate": {
+    "name": "250mm \"Purity\" Shell (crate)",
+    "category": "Heavy Ammunition",
+    "threshold": 30
+  },
+  "vanilla_MortarTankAmmoBR": {
+    "name": "250mm \"Fury\" Shell",
+    "category": "Heavy Ammunition",
+    "threshold": 30
+  },
+  "vanilla_MortarTankAmmoBRCrate": {
+    "name": "250mm \"Fury\" Shell (crate)",
+    "category": "Heavy Ammunition",
+    "threshold": 30
+  },
+  "vanilla_MortarTankC": {
+    "name": "HC-7 \"Ballista\"",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_MortarTankCCrate": {
+    "name": "HC-7 \"Ballista\" (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_Motorboat": {
+    "name": "BMS - Grouper",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_MotorboatCrate": {
+    "name": "BMS - Grouper (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_MotorcycleC": {
+    "name": "03MM \u201cCaster\u201d",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_MotorcycleCCrate": {
+    "name": "03MM \u201cCaster\u201d (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_MotorcycleOffensiveC": {
+    "name": "00MS \u201cStinger\u201d",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_MotorcycleOffensiveCCrate": {
+    "name": "00MS \u201cStinger\u201d (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_MotorcycleW": {
+    "name": "Kivela Power Wheel 80-1",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_MotorcycleWCrate": {
+    "name": "Kivela Power Wheel 80-1 (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_NavalUniformC": {
+    "name": "Remex Garb",
+    "category": "Uniforms",
+    "threshold": 10
+  },
+  "vanilla_NavalUniformCCrate": {
+    "name": "Remex Garb (crate)",
+    "category": "Uniforms",
+    "threshold": 10
+  },
+  "vanilla_NavalUniformW": {
+    "name": "Gentleman\u2019s Peacoat",
+    "category": "Uniforms",
+    "threshold": 10
+  },
+  "vanilla_NavalUniformWCrate": {
+    "name": "Gentleman\u2019s Peacoat (crate)",
+    "category": "Uniforms",
+    "threshold": 10
+  },
+  "vanilla_OfficerUniformC": {
+    "name": "Officialis\u2019 Attire",
+    "category": "Uniforms",
+    "threshold": 10
+  },
+  "vanilla_OfficerUniformCCrate": {
+    "name": "Officialis\u2019 Attire (crate)",
+    "category": "Uniforms",
+    "threshold": 10
+  },
+  "vanilla_OfficerUniformW": {
+    "name": "Officer\u2019s Regalia",
+    "category": "Uniforms",
+    "threshold": 10
+  },
+  "vanilla_OfficerUniformWCrate": {
+    "name": "Officer\u2019s Regalia (crate)",
+    "category": "Uniforms",
+    "threshold": 10
+  },
+  "vanilla_Oil": {
+    "name": "Oil",
+    "category": "Supplies",
+    "threshold": 20
+  },
+  "vanilla_OilCrate": {
+    "name": "Oil (crate)",
+    "category": "Supplies",
+    "threshold": 20
+  },
+  "vanilla_Petrol": {
+    "name": "Petrol",
+    "category": "Supplies",
+    "threshold": 20
+  },
+  "vanilla_PetrolCrate": {
+    "name": "Petrol (crate)",
+    "category": "Supplies",
+    "threshold": 20
+  },
+  "vanilla_PipeMaterials": {
+    "name": "Pipe",
+    "category": "Supplies",
+    "threshold": 20
+  },
+  "vanilla_PipeMaterialsCrate": {
+    "name": "Pipe (crate)",
+    "category": "Supplies",
+    "threshold": 20
+  },
+  "vanilla_PistolAmmo": {
+    "name": "8mm",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_PistolAmmoCrate": {
+    "name": "8mm (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_PistolC": {
+    "name": "Ferro 879",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_PistolCCrate": {
+    "name": "Ferro 879 (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_PistolLightW": {
+    "name": "Cascadier 873",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_PistolLightWCrate": {
+    "name": "Cascadier 873 (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_PistolW": {
+    "name": "Ahti Model 2",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_PistolWCrate": {
+    "name": "Ahti Model 2 (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_Radio": {
+    "name": "Radio",
+    "category": "Utility",
+    "threshold": 20
+  },
+  "vanilla_RadioCrate": {
+    "name": "Radio (crate)",
+    "category": "Utility",
+    "threshold": 20
+  },
+  "vanilla_RadioBackpack": {
+    "name": "Radio Backpack",
+    "category": "Utility",
+    "threshold": 20
+  },
+  "vanilla_RadioBackpackCrate": {
+    "name": "Radio Backpack (crate)",
+    "category": "Utility",
+    "threshold": 20
+  },
+  "vanilla_RainUniformC": {
+    "name": "Legionary\u2019s Oilcoat",
+    "category": "Uniforms",
+    "threshold": 10
+  },
+  "vanilla_RainUniformCCrate": {
+    "name": "Legionary\u2019s Oilcoat (crate)",
+    "category": "Uniforms",
+    "threshold": 10
+  },
+  "vanilla_RareMetal": {
+    "name": "Rare Metal",
+    "category": "Supplies",
+    "threshold": 20
+  },
+  "vanilla_RelicAPC": {
+    "name": "Heavy Infantry Carrier",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_RelicAPCCrate": {
+    "name": "Heavy Infantry Carrier (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_RelicArmouredCar": {
+    "name": "Armoured Fighting Tractor",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_RelicArmouredCarCrate": {
+    "name": "Armoured Fighting Tractor (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_RelicLightTank": {
+    "name": "Storm Tank",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_RelicLightTankCrate": {
+    "name": "Storm Tank (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_RelicMaterials": {
+    "name": "Relic Materials",
     "category": "Materials",
     "threshold": 30
   },
-  "96C": {
-    "name": "Refined Materials (crate)",
+  "vanilla_RelicMaterialsCrate": {
+    "name": "Relic Materials (crate)",
     "category": "Materials",
     "threshold": 30
   },
-  "105": {
-    "name": "Gunners Breastplates",
+  "vanilla_RelicMediumTank": {
+    "name": "PL-1 \u201cPhalanx\u201d",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_RelicMediumTankCrate": {
+    "name": "PL-1 \u201cPhalanx\u201d (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_RelicScoutVehicle": {
+    "name": "Staff Car",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_RelicScoutVehicleCrate": {
+    "name": "Staff Car (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_RelicTruck": {
+    "name": "Repurposed Truck",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_RelicTruckCrate": {
+    "name": "Repurposed Truck (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_Revolver": {
+    "name": "Cometa T2-9",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_RevolverCrate": {
+    "name": "Cometa T2-9 (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_RevolverAmmo": {
+    "name": ".44",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_RevolverAmmoCrate": {
+    "name": ".44 (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_RifleAmmo": {
+    "name": "7.62mm",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_RifleAmmoCrate": {
+    "name": "7.62mm (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_RifleAutomaticC": {
+    "name": "Catena rt.IV Auto-Rifle",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_RifleAutomaticCCrate": {
+    "name": "Catena rt.IV Auto-Rifle (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_RifleAutomaticW": {
+    "name": "Sampo Auto-Rifle 77",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_RifleAutomaticWCrate": {
+    "name": "Sampo Auto-Rifle 77 (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_RifleC": {
+    "name": "Argenti r.II Rifle",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_RifleCCrate": {
+    "name": "Argenti r.II Rifle (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_RifleHeavyC": {
+    "name": "Volta r.I Repeater",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_RifleHeavyCCrate": {
+    "name": "Volta r.I Repeater (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_RifleHeavyW": {
+    "name": "The Hangman 757",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_RifleHeavyWCrate": {
+    "name": "The Hangman 757 (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_RifleLightC": {
+    "name": "Fuscina pi.I",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_RifleLightCCrate": {
+    "name": "Fuscina pi.I (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_RifleLightW": {
+    "name": "Blakerow 871",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_RifleLightWCrate": {
+    "name": "Blakerow 871 (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_RifleLongC": {
+    "name": "KRR2-790 Omen",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_RifleLongCCrate": {
+    "name": "KRR2-790 Omen (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_RifleLongW": {
+    "name": "Clancy Cinder M3",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_RifleLongWCrate": {
+    "name": "Clancy Cinder M3 (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_RifleShortW": {
+    "name": "No.2B Hawthorne",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_RifleShortWCrate": {
+    "name": "No.2B Hawthorne (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_RifleW": {
+    "name": "No.2 Loughcaster",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_RifleWCrate": {
+    "name": "No.2 Loughcaster (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_RpgAmmo": {
+    "name": "RPG",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_RpgAmmoCrate": {
+    "name": "RPG (crate)",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_RPGTW": {
+    "name": "Cutler Foebreaker",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_RPGTWCrate": {
+    "name": "Cutler Foebreaker (crate)",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_RpgW": {
+    "name": "Cutler Launcher 4",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_RpgWCrate": {
+    "name": "Cutler Launcher 4 (crate)",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_SandbagMaterials": {
+    "name": "Sandbag",
+    "category": "Utility",
+    "threshold": 20
+  },
+  "vanilla_SandbagMaterialsCrate": {
+    "name": "Sandbag (crate)",
+    "category": "Utility",
+    "threshold": 20
+  },
+  "vanilla_SatchelChargeT": {
+    "name": "Havoc Charge Detonator",
+    "category": "Utility",
+    "threshold": 20
+  },
+  "vanilla_SatchelChargeTCrate": {
+    "name": "Havoc Charge Detonator (crate)",
+    "category": "Utility",
+    "threshold": 20
+  },
+  "vanilla_SatchelChargeW": {
+    "name": "Alligator Charge",
+    "category": "Utility",
+    "threshold": 20
+  },
+  "vanilla_SatchelChargeWCrate": {
+    "name": "Alligator Charge (crate)",
+    "category": "Utility",
+    "threshold": 20
+  },
+  "vanilla_ScoutTankMultiW": {
+    "name": "King Jester Mk. I-1",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_ScoutTankMultiWCrate": {
+    "name": "King Jester Mk. I-1 (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_ScoutTankOffensiveW": {
+    "name": "King Gallant Mk. II",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_ScoutTankOffensiveWCrate": {
+    "name": "King Gallant Mk. II (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_ScoutTankW": {
+    "name": "King Spire Mk. I",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_ScoutTankWCrate": {
+    "name": "King Spire Mk. I (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_ScoutUniformC": {
+    "name": "Recon Camo",
     "category": "Uniforms",
     "threshold": 10
   },
-  "105C": {
-    "name": "Gunners Breastplates (crate)",
+  "vanilla_ScoutUniformCCrate": {
+    "name": "Recon Camo (crate)",
     "category": "Uniforms",
     "threshold": 10
   },
-  "107": {
-    "name": "Sapper Uniforms",
+  "vanilla_ScoutUniformW": {
+    "name": "Outrider\u2019s Mantle",
     "category": "Uniforms",
     "threshold": 10
   },
-  "107C": {
-    "name": "Sapper Uniforms (crate)",
+  "vanilla_ScoutUniformWCrate": {
+    "name": "Outrider\u2019s Mantle (crate)",
     "category": "Uniforms",
     "threshold": 10
   },
-  "110": {
-    "name": "Medic Uniforms",
+  "vanilla_ScoutVehicleMobilityC": {
+    "name": "UV-05a \u201cArgonaut\u201d",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_ScoutVehicleMobilityCCrate": {
+    "name": "UV-05a \u201cArgonaut\u201d (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_ScoutVehicleOffensiveC": {
+    "name": "UV-24 \u201cIcarus\u201d",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_ScoutVehicleOffensiveCCrate": {
+    "name": "UV-24 \u201cIcarus\u201d (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_ScoutVehicleOffensiveW": {
+    "name": "Drummond Spitfire 100d",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_ScoutVehicleOffensiveWCrate": {
+    "name": "Drummond Spitfire 100d (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_ScoutVehicleUtilityC": {
+    "name": "UV-5c \u201cOdyssey\u201d",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_ScoutVehicleUtilityCCrate": {
+    "name": "UV-5c \u201cOdyssey\u201d (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_ScoutVehicleUtilityW": {
+    "name": "Drummond Loscann 55c",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_ScoutVehicleUtilityWCrate": {
+    "name": "Drummond Loscann 55c (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_ScoutVehicleW": {
+    "name": "Drummond 100a",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_ScoutVehicleWCrate": {
+    "name": "Drummond 100a (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_ShotgunAmmo": {
+    "name": "Buckshot",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_ShotgunAmmoCrate": {
+    "name": "Buckshot (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_ShotgunC": {
+    "name": "KRF1-750 Dragonfly",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_ShotgunCCrate": {
+    "name": "KRF1-750 Dragonfly (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_ShotgunW": {
+    "name": "No.4 The Pillory Scattergun",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_ShotgunWCrate": {
+    "name": "No.4 The Pillory Scattergun (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_Shovel": {
+    "name": "Shovel",
+    "category": "Utility",
+    "threshold": 20
+  },
+  "vanilla_ShovelCrate": {
+    "name": "Shovel (crate)",
+    "category": "Utility",
+    "threshold": 20
+  },
+  "vanilla_SledgeHammer": {
+    "name": "Sledge Hammer",
+    "category": "Utility",
+    "threshold": 20
+  },
+  "vanilla_SledgeHammerCrate": {
+    "name": "Sledge Hammer (crate)",
+    "category": "Utility",
+    "threshold": 20
+  },
+  "vanilla_SmallTrainEngine": {
+    "name": "BMS Mineseeker",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_SmallTrainEngineCrate": {
+    "name": "BMS Mineseeker (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_SmallTrainLiquid": {
+    "name": "BMS Tinderbox",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_SmallTrainLiquidCrate": {
+    "name": "BMS Tinderbox (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_SmallTrainMaterial": {
+    "name": "BMS Linerunner",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_SmallTrainMaterialCrate": {
+    "name": "BMS Linerunner (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_SmallTrainResource": {
+    "name": "BMS Railtruck",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_SmallTrainResourceCrate": {
+    "name": "BMS Railtruck (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_SmallTrainShipping": {
+    "name": "BMS Stowheel",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_SmallTrainShippingCrate": {
+    "name": "BMS Stowheel (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_SMGAmmo": {
+    "name": "9mm",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_SMGAmmoCrate": {
+    "name": "9mm (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_SMGC": {
+    "name": "\u201cThe Pitch Gun\u201d mc.V",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_SMGCCrate": {
+    "name": "\u201cThe Pitch Gun\u201d mc.V (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_SMGHeavyC": {
+    "name": "\u201cLionclaw\u201d mc.VIII",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_SMGHeavyCCrate": {
+    "name": "\u201cLionclaw\u201d mc.VIII (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_SMGHeavyW": {
+    "name": "No.1 \u201cThe Liar\u201d Submachinegun",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_SMGHeavyWCrate": {
+    "name": "No.1 \u201cThe Liar\u201d Submachinegun (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_SMGW": {
+    "name": "Fiddler Submachine Gun Model 868",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_SMGWCrate": {
+    "name": "Fiddler Submachine Gun Model 868 (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_SmokeGrenade": {
+    "name": "PT-815 Smoke Grenade",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_SmokeGrenadeCrate": {
+    "name": "PT-815 Smoke Grenade (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_SniperRifleC": {
+    "name": "KRR3-792 Auger",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_SniperRifleCCrate": {
+    "name": "KRR3-792 Auger (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_SniperRifleW": {
+    "name": "Clancy-Raca M4",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_SniperRifleWCrate": {
+    "name": "Clancy-Raca M4 (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "vanilla_SnowUniformC": {
+    "name": "Heavy Topcoat",
     "category": "Uniforms",
     "threshold": 10
   },
-  "110C": {
-    "name": "Medic Uniforms (crate)",
+  "vanilla_SnowUniformCCrate": {
+    "name": "Heavy Topcoat (crate)",
     "category": "Uniforms",
     "threshold": 10
   },
-  "113": {
-    "name": "Outriders Mantles",
+  "vanilla_SnowUniformW": {
+    "name": "Caoivish Parka",
     "category": "Uniforms",
     "threshold": 10
   },
-  "113C": {
-    "name": "Outriders Mantles (crate)",
+  "vanilla_SnowUniformWCrate": {
+    "name": "Caoivish Parka (crate)",
     "category": "Uniforms",
     "threshold": 10
   },
-  "115": {
-    "name": "Caovish Parkas",
+  "vanilla_SoldierSupplies": {
+    "name": "Soldier Supplies",
+    "category": "Medical",
+    "threshold": 15
+  },
+  "vanilla_SoldierSuppliesCrate": {
+    "name": "Soldier Supplies (crate)",
+    "category": "Medical",
+    "threshold": 15
+  },
+  "vanilla_SoldierUniformC": {
+    "name": "Legionary Fatigues",
     "category": "Uniforms",
     "threshold": 10
   },
-  "115C": {
-    "name": "Caovish Parkas (crate)",
+  "vanilla_SoldierUniformCCrate": {
+    "name": "Legionary Fatigues (crate)",
     "category": "Uniforms",
     "threshold": 10
   },
-  "116": {
-    "name": "Basic Colonial Uniforms",
-    "category": "Other",
-    "threshold": 0
-  },
-  "117": {
-    "name": "Basic Warden Uniforms",
-    "category": "Other",
-    "threshold": 0
-  },
-  "119": {
-    "name": "Padded Boilersuits",
+  "vanilla_SoldierUniformW": {
+    "name": "Infantry Battledress",
     "category": "Uniforms",
     "threshold": 10
   },
-  "119C": {
-    "name": "Padded Boilersuits (crate)",
+  "vanilla_SoldierUniformWCrate": {
+    "name": "Infantry Battledress (crate)",
     "category": "Uniforms",
     "threshold": 10
   },
-  "120": {
-    "name": "Dunne Caravan",
+  "vanilla_StickyBomb": {
+    "name": "Anti-Tank Sticky Bomb",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_StickyBombCrate": {
+    "name": "Anti-Tank Sticky Bomb (crate)",
+    "category": "Heavy Arms",
+    "threshold": 40
+  },
+  "vanilla_Sulfur": {
+    "name": "Sulfur",
+    "category": "Supplies",
+    "threshold": 20
+  },
+  "vanilla_SuperTankC": {
+    "name": "O-75b \"Ares\"",
     "category": "Vehicles",
     "threshold": 5
   },
-  "120C": {
-    "name": "Dunne Caravan (crate)",
+  "vanilla_SuperTankCCrate": {
+    "name": "O-75b \"Ares\" (crate)",
     "category": "Vehicles",
     "threshold": 5
   },
-  "121": {
-    "name": "Dunne Responder",
+  "vanilla_SuperTankW": {
+    "name": "Cullen Predator Mk. III",
     "category": "Vehicles",
     "threshold": 5
   },
-  "121C": {
-    "name": "Dunne Responder (crate)",
+  "vanilla_SuperTankWCrate": {
+    "name": "Cullen Predator Mk. III (crate)",
     "category": "Vehicles",
     "threshold": 5
   },
-  "127": {
-    "name": "O'Brien AC",
+  "vanilla_SwordC": {
+    "name": "Eleos Infantry Dagger",
+    "category": "Utility",
+    "threshold": 20
+  },
+  "vanilla_SwordCCrate": {
+    "name": "Eleos Infantry Dagger (crate)",
+    "category": "Utility",
+    "threshold": 20
+  },
+  "vanilla_TanketteC": {
+    "name": "T12 \u201cActaeon\u201d Tankette",
     "category": "Vehicles",
     "threshold": 5
   },
-  "127C": {
-    "name": "O'Brien AC (crate)",
+  "vanilla_TanketteCCrate": {
+    "name": "T12 \u201cActaeon\u201d Tankette (crate)",
     "category": "Vehicles",
     "threshold": 5
   },
-  "128": {
-    "name": "Mulloy APC",
+  "vanilla_TanketteFlameC": {
+    "name": "T14 \u201cVesta\u201d Tankette",
     "category": "Vehicles",
     "threshold": 5
   },
-  "128C": {
-    "name": "Mulloy APC (crate)",
+  "vanilla_TanketteFlameCCrate": {
+    "name": "T14 \u201cVesta\u201d Tankette (crate)",
     "category": "Vehicles",
     "threshold": 5
   },
-  "145": {
-    "name": "BMS Ironship",
+  "vanilla_TanketteMultiC": {
+    "name": "T13 \u201cDeioneus\u201d Rocket Battery",
     "category": "Vehicles",
     "threshold": 5
   },
-  "145C": {
-    "name": "BMS Ironship (crate)",
+  "vanilla_TanketteMultiCCrate": {
+    "name": "T13 \u201cDeioneus\u201d Rocket Battery (crate)",
     "category": "Vehicles",
     "threshold": 5
   },
-  "174": {
-    "name": "Kivela Power Wheel",
+  "vanilla_TanketteOffensiveC": {
+    "name": "T20 \u201cIxion\u201d Tankette",
     "category": "Vehicles",
     "threshold": 5
   },
-  "174C": {
-    "name": "Kivela Power Wheel (crate)",
+  "vanilla_TanketteOffensiveCCrate": {
+    "name": "T20 \u201cIxion\u201d Tankette (crate)",
     "category": "Vehicles",
     "threshold": 5
   },
-  "190": {
-    "name": "Dunne Loadlugger",
+  "vanilla_TankMine": {
+    "name": "Abisme AT-99 Mine",
+    "category": "Utility",
+    "threshold": 20
+  },
+  "vanilla_TankMineCrate": {
+    "name": "Abisme AT-99 Mine (crate)",
+    "category": "Utility",
+    "threshold": 20
+  },
+  "vanilla_TankUniformC": {
+    "name": "Tankman\u2019s Coveralls",
+    "category": "Uniforms",
+    "threshold": 10
+  },
+  "vanilla_TankUniformCCrate": {
+    "name": "Tankman\u2019s Coveralls (crate)",
+    "category": "Uniforms",
+    "threshold": 10
+  },
+  "vanilla_TankUniformW": {
+    "name": "Padded Boiler Suit",
+    "category": "Uniforms",
+    "threshold": 10
+  },
+  "vanilla_TankUniformWCrate": {
+    "name": "Padded Boiler Suit (crate)",
+    "category": "Uniforms",
+    "threshold": 10
+  },
+  "vanilla_TorpedoAmmo": {
+    "name": "Moray Torpedo",
+    "category": "Heavy Ammunition",
+    "threshold": 30
+  },
+  "vanilla_TrailerLiquid": {
+    "name": "Rooster - Lamploader",
     "category": "Vehicles",
     "threshold": 5
   },
-  "190C": {
-    "name": "Dunne Loadlugger (crate)",
+  "vanilla_TrailerLiquidCrate": {
+    "name": "Rooster - Lamploader (crate)",
     "category": "Vehicles",
     "threshold": 5
   },
-  "194": {
+  "vanilla_TrailerMaterial": {
+    "name": "Rooster - Tumblebox",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_TrailerMaterialCrate": {
+    "name": "Rooster - Tumblebox (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_TrailerResource": {
+    "name": "Rooster - Junkwagon",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_TrailerResourceCrate": {
+    "name": "Rooster - Junkwagon (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_TrainCaboose": {
+    "name": "BMS Roadhouse",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_TrainCabooseCrate": {
+    "name": "BMS Roadhouse (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_TrainCoal": {
+    "name": "BMS Rockhold",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_TrainCoalCrate": {
+    "name": "BMS Rockhold (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_TrainCombatCarC": {
+    "name": "Aegis Steelbreaker K5a",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_TrainCombatCarCCrate": {
+    "name": "Aegis Steelbreaker K5a (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_TrainCombatCarW": {
+    "name": "O\u2019Brien Warsmith v.215",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_TrainCombatCarWCrate": {
+    "name": "O\u2019Brien Warsmith v.215 (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_TrainEngine": {
+    "name": "BMS Black Bolt",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_TrainEngineCrate": {
+    "name": "BMS Black Bolt (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_TrainFlatbed": {
+    "name": "BMS Longrider",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_TrainFlatbedCrate": {
+    "name": "BMS Longrider (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_TrainHospital": {
+    "name": "BMS Bloodtender",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_TrainHospitalCrate": {
+    "name": "BMS Bloodtender (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_TrainInfantry": {
+    "name": "BMS Holdout",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_TrainInfantryCrate": {
+    "name": "BMS Holdout (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_TrainLRArtillery": {
+    "name": "Tempest Cannon RA-2",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_TrainLRArtilleryCrate": {
+    "name": "Tempest Cannon RA-2 (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_TraumaKit": {
+    "name": "Trauma Kit",
+    "category": "Medical",
+    "threshold": 15
+  },
+  "vanilla_TraumaKitCrate": {
+    "name": "Trauma Kit (crate)",
+    "category": "Medical",
+    "threshold": 15
+  },
+  "vanilla_Tripod": {
+    "name": "Tripod",
+    "category": "Utility",
+    "threshold": 20
+  },
+  "vanilla_TripodCrate": {
+    "name": "Tripod (crate)",
+    "category": "Utility",
+    "threshold": 20
+  },
+  "vanilla_TruckC": {
+    "name": "R-1 Hauler",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_TruckCCrate": {
+    "name": "R-1 Hauler (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_TruckDefensiveW": {
+    "name": "Dunne Leatherback 2a",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_TruckDefensiveWCrate": {
+    "name": "Dunne Leatherback 2a (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_TruckLiquidC": {
+    "name": "RR-3 \u201cStolon\u201d Tanker",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_TruckLiquidCCrate": {
+    "name": "RR-3 \u201cStolon\u201d Tanker (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_TruckLiquidW": {
+    "name": "Dunne Fuelrunner 2d",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_TruckLiquidWCrate": {
+    "name": "Dunne Fuelrunner 2d (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_TruckMobilityC": {
+    "name": "R-5b \u201cSisyphus\u201d Hauler",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_TruckMobilityCCrate": {
+    "name": "R-5b \u201cSisyphus\u201d Hauler (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_TruckMobilityW": {
+    "name": "Dunne Landrunner 12c",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_TruckMobilityWCrate": {
+    "name": "Dunne Landrunner 12c (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_TruckMultiC": {
+    "name": "R-17 \u201cRetiarius\u201d Skirmisher",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_TruckMultiCCrate": {
+    "name": "R-17 \u201cRetiarius\u201d Skirmisher (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_TruckOffensiveC": {
+    "name": "R-9 \u201cSpeartip\u201d Escort",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_TruckOffensiveCCrate": {
+    "name": "R-9 \u201cSpeartip\u201d Escort (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_TruckResourceC": {
+    "name": "R-5 \u201cAtlas\u201d Hauler",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_TruckResourceCCrate": {
+    "name": "R-5 \u201cAtlas\u201d Hauler (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_TruckResourceW": {
+    "name": "Dunne Loadlugger 3c",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_TruckResourceWCrate": {
+    "name": "Dunne Loadlugger 3c (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "vanilla_TruckW": {
     "name": "Dunne Transport",
     "category": "Vehicles",
     "threshold": 5
   },
-  "194C": {
+  "vanilla_TruckWCrate": {
     "name": "Dunne Transport (crate)",
     "category": "Vehicles",
     "threshold": 5
   },
-  "201": {
-    "name": "O'Leary Snaretrap 12.7",
-    "category": "Vehicles",
-    "threshold": 5
+  "vanilla_Water": {
+    "name": "Water",
+    "category": "Supplies",
+    "threshold": 20
   },
-  "201C": {
-    "name": "O'Leary Snaretrap 12.7 (crate)",
-    "category": "Vehicles",
-    "threshold": 5
+  "vanilla_WaterCrate": {
+    "name": "Water (crate)",
+    "category": "Supplies",
+    "threshold": 20
   },
-  "203": {
-    "name": "Resource Container",
-    "category": "Logistics",
-    "threshold": 5
+  "vanilla_WaterBucket": {
+    "name": "Water Bucket",
+    "category": "Utility",
+    "threshold": 20
   },
-  "203C": {
-    "name": "Resource Container (crate)",
-    "category": "Logistics",
-    "threshold": 5
+  "vanilla_WaterBucketCrate": {
+    "name": "Water Bucket (crate)",
+    "category": "Utility",
+    "threshold": 20
   },
-  "205": {
-    "name": "Shipping Container",
-    "category": "Logistics",
-    "threshold": 5
+  "vanilla_WaterMine": {
+    "name": "E680-S Rudder Lock",
+    "category": "Utility",
+    "threshold": 20
   },
-  "205C": {
-    "name": "Shipping Container (crate)",
-    "category": "Logistics",
-    "threshold": 5
+  "vanilla_WaterMineCrate": {
+    "name": "E680-S Rudder Lock (crate)",
+    "category": "Utility",
+    "threshold": 20
   },
-  "207": {
-    "name": "Barbed Wire",
+  "vanilla_WindsockT": {
+    "name": "Wind Sock",
+    "category": "Utility",
+    "threshold": 20
+  },
+  "vanilla_WindsockTCrate": {
+    "name": "Wind Sock (crate)",
+    "category": "Utility",
+    "threshold": 20
+  },
+  "vanilla_Wood": {
+    "name": "Refined Materials",
     "category": "Materials",
     "threshold": 30
   },
-  "207C": {
-    "name": "Barbed Wire (crate)",
+  "vanilla_WoodCrate": {
+    "name": "Refined Materials (crate)",
     "category": "Materials",
     "threshold": 30
   },
-  "208": {
-    "name": "Sandbags",
-    "category": "Materials",
-    "threshold": 30
+  "vanilla_WorkHammer": {
+    "name": "Hammer",
+    "category": "Utility",
+    "threshold": 20
   },
-  "208C": {
-    "name": "Sandbags (crate)",
-    "category": "Materials",
-    "threshold": 30
+  "vanilla_WorkHammerCrate": {
+    "name": "Hammer (crate)",
+    "category": "Utility",
+    "threshold": 20
   },
-  "232": {
-    "name": "Gravel",
-    "category": "Materials",
-    "threshold": 30
+  "vanilla_WorkWrench": {
+    "name": "Wrench",
+    "category": "Utility",
+    "threshold": 20
   },
-  "232C": {
-    "name": "Gravel (crate)",
-    "category": "Materials",
-    "threshold": 30
+  "vanilla_WorkWrenchCrate": {
+    "name": "Wrench (crate)",
+    "category": "Utility",
+    "threshold": 20
+  },
+  "vanilla_Wreckage": {
+    "name": "Wreckage",
+    "category": "Supplies",
+    "threshold": 20
   }
 }

@@ -41,14 +41,14 @@ class ConfigManager:
         
         # Category mapping from game categories to our categories
         self.category_map = {
-            'EItemCategory::LightArms': 'Light Arms',
+            'EItemCategory::SmallArms': 'Light Arms',
             'EItemCategory::HeavyArms': 'Heavy Arms',
             'EItemCategory::HeavyAmmo': 'Heavy Arms',
             'EItemCategory::Utility': 'Infantry Equipment',
             'EItemCategory::Medical': 'Medical',
             'EItemCategory::Supplies': 'Supplies',
             'EItemCategory::Resource': 'Materials',
-            'EItemCategory::Uniform': 'Uniforms',
+            'EItemCategory::Uniforms': 'Uniforms',
             'EItemCategory::Ammunition': 'Munitions',
         }
         
@@ -441,7 +441,7 @@ class ConfigManager:
         templates = self.config.get('paths', {}).get('templates', {})
         return {
             'base': templates.get('base', 'data/processed_templates'),
-            'numbers': templates.get('numbers', 'data/Numbers')
+            'numbers': templates.get('numbers', 'data/numbers')
         }
     
     def get_detection_settings(self) -> Dict[str, Any]:
