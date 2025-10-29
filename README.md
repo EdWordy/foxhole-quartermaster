@@ -11,7 +11,7 @@ An application for compiling and tracking stockpile data for the game Foxhole.
 4) Generate a report (which creates an excel spreadsheet)
 5) (Optional) Run basic analytics on the data using the analysis window tab
 
-NOTE: The included files such as the item_ and number_mappings are necessary, including the Reports directory (which is where generated data will be placed).
+NOTE: The included files such as the data/catalog.json, data/processed_templates and data/number_mappings.csv are necessary, including the Reports directory (which is where generated data will be placed).
 
 ## Goal(s)
 
@@ -21,11 +21,13 @@ NOTE: The included files such as the item_ and number_mappings are necessary, in
 
 ## TODO
 
--All the item mappings are not finished; I play warden, and have yet to finish updating the colonials weaponry, and most of the vehicles.
+- ~~All the item mappings are not finished; I play warden, and have yet to finish updating the colonials weaponry, and most of the vehicles.~~
 
--Further refinement
+- ~~Further refinement~~
 
--Expansion of the feature set.
+- Expansion of the feature set.
+
+- Optimize and improve speed
 
 ## Screenshots
 
