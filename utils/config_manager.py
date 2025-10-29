@@ -373,8 +373,25 @@ class ConfigManager:
             item_code: Item code
             
         Returns:
-            Name of the item
+            Name of the item (with "(crate)" suffix for crated items)
         """
+        # Check if it's a crated item
+        if item_code.endswith('_crated'):
+            # Get the base item name
+            base_code = item_code.replace('_crated', '')
+            if base_code in self.item_mappings:
+                base_name = self.item_mappings[base_code].get('name', base_code)
+                return f"{base_name} (crate)"
+            return item_code
+        elif item_code.endswith('C') and len(item_code) > 1:
+            # Try alternate crated format (e.g., "207C")
+            base_code = item_code[:-1]
+            if base_code in self.item_mappings:
+                base_name = self.item_mappings[base_code].get('name', base_code)
+                return f"{base_name} (crate)"
+            return item_code
+        
+        # Regular item
         if item_code in self.item_mappings:
             return self.item_mappings[item_code].get('name', item_code)
         return item_code
@@ -389,6 +406,21 @@ class ConfigManager:
         Returns:
             Category of the item
         """
+        # Check if it's a crated item
+        if item_code.endswith('_crated'):
+            # Get the base item category
+            base_code = item_code.replace('_crated', '')
+            if base_code in self.item_mappings:
+                return self.item_mappings[base_code].get('category', 'Other')
+            return 'Other'
+        elif item_code.endswith('C') and len(item_code) > 1:
+            # Try alternate crated format
+            base_code = item_code[:-1]
+            if base_code in self.item_mappings:
+                return self.item_mappings[base_code].get('category', 'Other')
+            return 'Other'
+        
+        # Regular item
         if item_code in self.item_mappings:
             return self.item_mappings[item_code].get('category', 'Other')
         return 'Other'
@@ -409,7 +441,7 @@ class ConfigManager:
         templates = self.config.get('paths', {}).get('templates', {})
         return {
             'base': templates.get('base', 'data/processed_templates'),
-            'numbers': templates.get('numbers', 'data/numbers')
+            'numbers': templates.get('numbers', 'data/Numbers')
         }
     
     def get_detection_settings(self) -> Dict[str, Any]:
