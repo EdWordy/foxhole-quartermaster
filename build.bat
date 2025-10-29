@@ -38,10 +38,10 @@ if %ERRORLEVEL% NEQ 0 (
 
 echo.
 echo Copying additional files...
-if not exist "dist\FoxholeQuartermaster\CheckImages" mkdir "dist\FoxholeQuartermaster\CheckImages"
-xcopy /E /I /Y "CheckImages" "dist\FoxholeQuartermaster\CheckImages"
-copy /Y "item_mappings.csv" "dist\FoxholeQuartermaster\"
-copy /Y "item_thresholds.json" "dist\FoxholeQuartermaster\"
+if not exist "dist\FoxholeQuartermaster\data\processed_templates" mkdir "dist\FoxholeQuartermaster\data\processed_templates"
+xcopy /E /I /Y "data\processed_templates" "dist\FoxholeQuartermaster\data\processed_templates"
+copy /Y "data\catalog.json" "dist\FoxholeQuartermaster\data"
+copy /Y "data\item_thresholds.json" "dist\FoxholeQuartermaster\data"
 if exist "config.yaml" copy /Y "config.yaml" "dist\FoxholeQuartermaster\"
 
 echo.
