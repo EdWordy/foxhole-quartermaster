@@ -3,7 +3,7 @@ An application for compiling and tracking stockpile data for the game Foxhole.
 
 *NOTE: Heavily WIP*
 
-## For Most Users
+## General Use
 
 1) Download the latest release (.exe)
 2) Run the program
@@ -39,12 +39,12 @@ Software is provided as-is and the author assumes no responsibility for its usag
 
 MIT
 
-## Build Instructions
+## Advanced Users: Build Instructions
 
 1) Download the source code
 2) Open Thonny (or a similar program)
 3) Check for installed prereqs (Numpy, Pyinstaller, OpenCV, etc.)
 4) Open a console in the source code folder
-5) type into your console `build.bat`
+5) type into your console `build.bat` or python build_app.py
 6) ????
 7) profit
