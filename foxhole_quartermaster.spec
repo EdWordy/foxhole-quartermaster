@@ -9,10 +9,10 @@ block_cipher = None
 
 # Collect all necessary data files
 datas = [
-    ('CheckImages/Default/*.png', 'CheckImages/Default'),
-    ('CheckImages/Numbers/*.png', 'CheckImages/Numbers'),
-    ('item_mappings.csv', '.'),
-    ('item_thresholds.json', '.'),
+    ('data/processed_templates/*/*.png', 'data/processed_templates'),
+    ('data/numbers/*.png', 'data/numbers'),
+    ('data/catalog.json', '.'),
+    ('data/item_thresholds.json', '.'),
 ]
 
 # Add config.yaml if it exists

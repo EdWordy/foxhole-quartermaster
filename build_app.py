@@ -82,13 +82,13 @@ def copy_additional_files():
     dist_dir = Path("dist/FoxholeQuartermaster")
     
     # Create CheckImages directory if it doesn't exist
-    check_images_dir = dist_dir / "CheckImages"
+    check_images_dir = dist_dir / "data"
     os.makedirs(check_images_dir, exist_ok=True)
     
     # Copy CheckImages directory
-    if Path("CheckImages").exists():
+    if Path("data").exists():
         for subdir in ["Default", "Numbers"]:
-            src_dir = Path(f"CheckImages/{subdir}")
+            src_dir = Path(f"data/{subdir}")
             dst_dir = check_images_dir / subdir
             if src_dir.exists():
                 os.makedirs(dst_dir, exist_ok=True)
@@ -96,7 +96,7 @@ def copy_additional_files():
                     shutil.copy2(file, dst_dir)
     
     # Copy other necessary files
-    for file in ["item_mappings.csv", "item_thresholds.json"]:
+    for file in ["data/catalog.json", "data/item_thresholds.json"]:
         if Path(file).exists():
             shutil.copy2(file, dist_dir)
     
