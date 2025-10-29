@@ -35,7 +35,7 @@ class MainWindow(tk.Tk):
         
         # Set up window
         self.title("Foxhole Quartermaster")
-        self.geometry(self.app.config.get_ui_settings().get('default_window_size', '1200x800'))
+        self.geometry('1200x800')
         
         # Try to set icon
         try:
@@ -100,7 +100,7 @@ class MainWindow(tk.Tk):
                   command=self.open_settings).pack(side=tk.LEFT, padx=5)
         
         # Add checkboxes for options
-        self.show_visualization = tk.BooleanVar(value=self.app.config.get_ui_settings().get('show_visualization', False))
+        self.show_visualization = tk.BooleanVar(value=self.app.config.get_detection_settings().get('show_visualization', False))
         ttk.Checkbutton(input_frame, text="Show Detection Visualization", 
                        variable=self.show_visualization).pack(side=tk.LEFT, padx=5)
         
@@ -729,10 +729,11 @@ class SettingsWindow(tk.Toplevel):
             # Save paths
             paths = self.app.config.config.get('paths', {})
             paths['reports'] = self.reports_path_var.get()
-            paths['templates'] = {
-                'icons': self.templates_path_var.get(),
-                'numbers': os.path.join(os.path.dirname(self.templates_path_var.get()), 'Numbers')
-            }
+            templates = paths.get('templates', {})
+            templates['base'] = self.templates_path_var.get()
+            # Keep numbers path relative to the base
+            templates['numbers'] = self.app.config.get_template_paths().get('numbers', 'CheckImages/Numbers')
+            paths['templates'] = templates
             
             # Save all settings
             self.app.config.save()
@@ -742,3 +743,4 @@ class SettingsWindow(tk.Toplevel):
             
         except Exception as e:
             messagebox.showerror("Error", f"Error saving settings: {str(e)}")
+            

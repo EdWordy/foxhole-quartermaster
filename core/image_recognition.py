@@ -37,8 +37,8 @@ class ImageRecognizer:
         
         # Get template paths
         template_paths = self.config.get_template_paths()
-        self.icon_template_dir = Path(template_paths.get('icons', 'CheckImages/Default'))
-        self.number_template_dir = Path(template_paths.get('numbers', 'CheckImages/Numbers'))
+        self.base_template_dir = Path(template_paths.get('base', 'data/processed_templates'))
+        self.number_template_dir = Path(template_paths.get('numbers', 'data/numbers'))
         
         # Initialize templates
         self.icon_templates = {}
@@ -75,17 +75,71 @@ class ImageRecognizer:
     
     def load_templates(self) -> None:
         """Load icon and number templates from directories."""
-        self.logger.info(f"Loading icon templates from {self.icon_template_dir}")
-        self.icon_templates = self._load_templates_from_dir(self.icon_template_dir)
+        self.logger.info(f"Loading icon templates from {self.base_template_dir}")
+        self.icon_templates = self._load_item_templates()
         
         self.logger.info(f"Loading number templates from {self.number_template_dir}")
         self.number_templates = self._load_templates_from_dir(self.number_template_dir)
         
         self.logger.info(f"Loaded {len(self.icon_templates)} icon templates and {len(self.number_templates)} number templates")
     
+    def _load_item_templates(self) -> Dict[str, Dict[str, Any]]:
+        """
+        Load item templates from the catalog-based directory structure.
+        Each item has its own folder under base_template_dir, named by CodeName.
+        Multiple variations of the same item (different angles/states) are loaded.
+        
+        Returns:
+            Dict mapping template names to template data
+        """
+        templates = {}
+        
+        if not self.base_template_dir.exists():
+            self.logger.warning(f"Base template directory not found: {self.base_template_dir}")
+            return templates
+        
+        # Iterate through each item folder
+        for item_dir in self.base_template_dir.iterdir():
+            if not item_dir.is_dir():
+                continue
+            
+            item_code = item_dir.name
+            
+            # Find PNG files in the item directory
+            template_files = list(item_dir.glob("*.png"))
+            
+            if not template_files:
+                self.logger.debug(f"No templates found for item: {item_code}")
+                continue
+            
+            # Load ALL variations of this item
+            for template_path in template_files:
+                template = cv.imread(str(template_path))
+                if template is not None:
+                    template_gray = cv.cvtColor(template, cv.COLOR_BGR2GRAY)
+                    _, template_binary = cv.threshold(template_gray, 30, 255, cv.THRESH_BINARY)
+                    
+                    # Use the item code (folder name) as the template name
+                    # This way all variations map to the same item code
+                    # Create unique key for this specific variation
+                    variation_key = f"{item_code}_{template_path.stem}"
+                    
+                    templates[variation_key] = {
+                        'gray': template_gray,
+                        'binary': template_binary,
+                        'size': template.shape[:2],
+                        'path': template_path,
+                        'item_code': item_code  # Store the actual item code
+                    }
+                    self.logger.debug(f"Loaded template variation: {variation_key}")
+                else:
+                    self.logger.warning(f"Failed to load template: {template_path}")
+        
+        return templates
+    
     def _load_templates_from_dir(self, template_dir: Path) -> Dict[str, Dict[str, Any]]:
         """
-        Load templates from a directory.
+        Load templates from a flat directory (used for number templates).
         
         Args:
             template_dir: Directory containing template images
@@ -94,6 +148,11 @@ class ImageRecognizer:
             Dict mapping template names to template data
         """
         templates = {}
+        
+        if not template_dir.exists():
+            self.logger.warning(f"Template directory not found: {template_dir}")
+            return templates
+        
         template_files = list(template_dir.glob("*.png"))
         
         for template_path in template_files:
@@ -168,8 +227,11 @@ class ImageRecognizer:
                         break
                 
                 if not overlap:
+                    # Use the item_code from template_data (the folder name, not the file name)
+                    item_code = template_data.get('item_code', template_name)
+                    
                     matches.append({
-                        "template_name": template_name,
+                        "template_name": item_code,  # Use item_code so all variations map to same item
                         "confidence": float(res[pt[1], pt[0]]),
                         "location": (int(pt[0]), int(pt[1]), w, h)
                     })

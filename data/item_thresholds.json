@@ -1,0 +1,612 @@
+{
+  "1": {
+    "name": "Dusk ce.III",
+    "category": "Light Arms",
+    "threshold": 0
+  },
+  "1C": {
+    "name": "Dusk ce.III (crate)",
+    "category": "Light Arms",
+    "threshold": 0
+  },
+  "2": {
+    "name": "Booker Storm Rifle",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "2C": {
+    "name": "Booker Storm Rifle (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "3": {
+    "name": "Aalto Storm Rifle",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "3C": {
+    "name": "Aalto Storm Rifle (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "4": {
+    "name": "7.92mm",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "4C": {
+    "name": "7.92mm (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "5": {
+    "name": "Catara LMG",
+    "category": "Light Arms",
+    "threshold": 0
+  },
+  "5C": {
+    "name": "Catara LMG (crate)",
+    "category": "Light Arms",
+    "threshold": 0
+  },
+  "6": {
+    "name": "Gast MG",
+    "category": "Light Arms",
+    "threshold": 0
+  },
+  "6C": {
+    "name": "Gast MG (crate)",
+    "category": "Light Arms",
+    "threshold": 0
+  },
+  "7": {
+    "name": "Malone MG",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "7C": {
+    "name": "Malone MG (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "8": {
+    "name": "12.7mm",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "8C": {
+    "name": "12.7mm (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "9": {
+    "name": "Smoke Grenade",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "9C": {
+    "name": "Smoke Grenade (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "11": {
+    "name": "Cascadier Pistol",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "11C": {
+    "name": "Cascadier Pistol (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "13": {
+    "name": "Cometa Revolver",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "13C": {
+    "name": "Cometa Revolver (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "14": {
+    "name": "Hangman Rifle",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "14C": {
+    "name": "Hangman Rifle (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "15": {
+    "name": ".44",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "15C": {
+    "name": ".44 (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "16": {
+    "name": "Sampo Autorifle",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "16C": {
+    "name": "Sampo Autorifle (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "20": {
+    "name": "Blakerow",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "20C": {
+    "name": "Blakerow (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "23": {
+    "name": "Lougcaster No.2 Rifle",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "23C": {
+    "name": "Loughcaster No.2 Rifle (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "24": {
+    "name": "7.62mm",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "24C": {
+    "name": "7.62mm (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "31": {
+    "name": "9mm ",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "31C": {
+    "name": "9mm (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "36": {
+    "name": "20mm",
+    "category": "Light Arms ",
+    "threshold": 0
+  },
+  "36C": {
+    "name": "20mm (crate)",
+    "category": "Light Arms",
+    "threshold": 40
+  },
+  "66": {
+    "name": "Binoculars",
+    "category": "Infantry Equipment ",
+    "threshold": 0
+  },
+  "66C": {
+    "name": "Binoculars (crate)",
+    "category": "Infantry Equipment ",
+    "threshold": 0
+  },
+  "72": {
+    "name": "Sledgehammers",
+    "category": "Infantry Equipment ",
+    "threshold": 0
+  },
+  "72C": {
+    "name": "Sledgehammers (crate)",
+    "category": "Infantry Equipment ",
+    "threshold": 0
+  },
+  "76": {
+    "name": "Wrenches",
+    "category": "Infantry Equipment ",
+    "threshold": 0
+  },
+  "76C": {
+    "name": "Wrenches (crate)",
+    "category": "Infantry Equipment ",
+    "threshold": 0
+  },
+  "77": {
+    "name": "Bayonets",
+    "category": "Infantry Equipment ",
+    "threshold": 0
+  },
+  "77C": {
+    "name": "Bayonets (crate)",
+    "category": "Infantry Equipment ",
+    "threshold": 0
+  },
+  "78": {
+    "name": "Gas Masks",
+    "category": "Infantry Equipment ",
+    "threshold": 0
+  },
+  "78C": {
+    "name": "Gas Masks (crate)",
+    "category": "Infantry Equipment ",
+    "threshold": 0
+  },
+  "79": {
+    "name": "Gas Mask Filters",
+    "category": "Infantry Equipment ",
+    "threshold": 0
+  },
+  "79C": {
+    "name": "Gas Mask Filters (crate)",
+    "category": "Infantry Equipment ",
+    "threshold": 0
+  },
+  "80": {
+    "name": "Radios",
+    "category": "Infantry Equipment ",
+    "threshold": 0
+  },
+  "80C": {
+    "name": "Radio (crate)",
+    "category": "Infantry Equipment ",
+    "threshold": 0
+  },
+  "82": {
+    "name": "Bandages",
+    "category": "Medical",
+    "threshold": 15
+  },
+  "82C": {
+    "name": "Bandages (crate)",
+    "category": "Medical",
+    "threshold": 15
+  },
+  "83": {
+    "name": "Medical Kits",
+    "category": "Medical",
+    "threshold": 15
+  },
+  "83C": {
+    "name": "Medical Kits (crate)",
+    "category": "Medical",
+    "threshold": 15
+  },
+  "84": {
+    "name": "Trauma Kits",
+    "category": "Medical",
+    "threshold": 15
+  },
+  "84C": {
+    "name": "Trauma Kits (crate)",
+    "category": "Medical",
+    "threshold": 15
+  },
+  "85": {
+    "name": "Blood Plasma",
+    "category": "Medical",
+    "threshold": 15
+  },
+  "85C": {
+    "name": "Blood Plasma (crate)",
+    "category": "Medical",
+    "threshold": 15
+  },
+  "86": {
+    "name": "Soldier Supplies",
+    "category": "Medical",
+    "threshold": 15
+  },
+  "86C": {
+    "name": "Soldier Supplies (crate)",
+    "category": "Medical",
+    "threshold": 15
+  },
+  "87": {
+    "name": "Diesel",
+    "category": "Supplies",
+    "threshold": 20
+  },
+  "87C": {
+    "name": "Diesel (crate)",
+    "category": "Supplies",
+    "threshold": 20
+  },
+  "88": {
+    "name": "Petrol",
+    "category": "Supplies",
+    "threshold": 20
+  },
+  "88C": {
+    "name": "Petrol (crate)",
+    "category": "Supplies",
+    "threshold": 20
+  },
+  "89": {
+    "name": "Aluminum Alloy",
+    "category": "Materials",
+    "threshold": 30
+  },
+  "89C": {
+    "name": "Aluminum Alloy (crate)",
+    "category": "Materials",
+    "threshold": 30
+  },
+  "91": {
+    "name": "Basic Materials",
+    "category": "Materials",
+    "threshold": 30
+  },
+  "91C": {
+    "name": "Basic Materials (crate)",
+    "category": "Materials",
+    "threshold": 30
+  },
+  "92": {
+    "name": "Explosive Materials",
+    "category": "Materials",
+    "threshold": 30
+  },
+  "92C": {
+    "name": "Explosive Materials (crate)",
+    "category": "Materials",
+    "threshold": 30
+  },
+  "93": {
+    "name": "Maintenance Supplies",
+    "category": "Maintenance",
+    "threshold": 10
+  },
+  "93C": {
+    "name": "Maintenance Supplies (crate)",
+    "category": "Maintenance",
+    "threshold": 10
+  },
+  "94": {
+    "name": "High Explosive Materials",
+    "category": "Materials",
+    "threshold": 30
+  },
+  "94C": {
+    "name": "High Explosive Materials (crate)",
+    "category": "Materials",
+    "threshold": 30
+  },
+  "95": {
+    "name": "Iron Alloy",
+    "category": "Materials",
+    "threshold": 30
+  },
+  "95C": {
+    "name": "Iron Alloy (crate)",
+    "category": "Materials",
+    "threshold": 30
+  },
+  "96": {
+    "name": "Refined Materials",
+    "category": "Materials",
+    "threshold": 30
+  },
+  "96C": {
+    "name": "Refined Materials (crate)",
+    "category": "Materials",
+    "threshold": 30
+  },
+  "105": {
+    "name": "Gunners Breastplates",
+    "category": "Uniforms",
+    "threshold": 10
+  },
+  "105C": {
+    "name": "Gunners Breastplates (crate)",
+    "category": "Uniforms",
+    "threshold": 10
+  },
+  "107": {
+    "name": "Sapper Uniforms",
+    "category": "Uniforms",
+    "threshold": 10
+  },
+  "107C": {
+    "name": "Sapper Uniforms (crate)",
+    "category": "Uniforms",
+    "threshold": 10
+  },
+  "110": {
+    "name": "Medic Uniforms",
+    "category": "Uniforms",
+    "threshold": 10
+  },
+  "110C": {
+    "name": "Medic Uniforms (crate)",
+    "category": "Uniforms",
+    "threshold": 10
+  },
+  "113": {
+    "name": "Outriders Mantles",
+    "category": "Uniforms",
+    "threshold": 10
+  },
+  "113C": {
+    "name": "Outriders Mantles (crate)",
+    "category": "Uniforms",
+    "threshold": 10
+  },
+  "115": {
+    "name": "Caovish Parkas",
+    "category": "Uniforms",
+    "threshold": 10
+  },
+  "115C": {
+    "name": "Caovish Parkas (crate)",
+    "category": "Uniforms",
+    "threshold": 10
+  },
+  "116": {
+    "name": "Basic Colonial Uniforms",
+    "category": "Other",
+    "threshold": 0
+  },
+  "117": {
+    "name": "Basic Warden Uniforms",
+    "category": "Other",
+    "threshold": 0
+  },
+  "119": {
+    "name": "Padded Boilersuits",
+    "category": "Uniforms",
+    "threshold": 10
+  },
+  "119C": {
+    "name": "Padded Boilersuits (crate)",
+    "category": "Uniforms",
+    "threshold": 10
+  },
+  "120": {
+    "name": "Dunne Caravan",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "120C": {
+    "name": "Dunne Caravan (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "121": {
+    "name": "Dunne Responder",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "121C": {
+    "name": "Dunne Responder (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "127": {
+    "name": "O'Brien AC",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "127C": {
+    "name": "O'Brien AC (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "128": {
+    "name": "Mulloy APC",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "128C": {
+    "name": "Mulloy APC (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "145": {
+    "name": "BMS Ironship",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "145C": {
+    "name": "BMS Ironship (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "174": {
+    "name": "Kivela Power Wheel",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "174C": {
+    "name": "Kivela Power Wheel (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "190": {
+    "name": "Dunne Loadlugger",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "190C": {
+    "name": "Dunne Loadlugger (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "194": {
+    "name": "Dunne Transport",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "194C": {
+    "name": "Dunne Transport (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "201": {
+    "name": "O'Leary Snaretrap 12.7",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "201C": {
+    "name": "O'Leary Snaretrap 12.7 (crate)",
+    "category": "Vehicles",
+    "threshold": 5
+  },
+  "203": {
+    "name": "Resource Container",
+    "category": "Logistics",
+    "threshold": 5
+  },
+  "203C": {
+    "name": "Resource Container (crate)",
+    "category": "Logistics",
+    "threshold": 5
+  },
+  "205": {
+    "name": "Shipping Container",
+    "category": "Logistics",
+    "threshold": 5
+  },
+  "205C": {
+    "name": "Shipping Container (crate)",
+    "category": "Logistics",
+    "threshold": 5
+  },
+  "207": {
+    "name": "Barbed Wire",
+    "category": "Materials",
+    "threshold": 30
+  },
+  "207C": {
+    "name": "Barbed Wire (crate)",
+    "category": "Materials",
+    "threshold": 30
+  },
+  "208": {
+    "name": "Sandbags",
+    "category": "Materials",
+    "threshold": 30
+  },
+  "208C": {
+    "name": "Sandbags (crate)",
+    "category": "Materials",
+    "threshold": 30
+  },
+  "232": {
+    "name": "Gravel",
+    "category": "Materials",
+    "threshold": 30
+  },
+  "232C": {
+    "name": "Gravel (crate)",
+    "category": "Materials",
+    "threshold": 30
+  }
+}

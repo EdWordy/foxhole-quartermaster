@@ -1,11 +1,11 @@
 paths:
+  catalog: data/catalog.json
   templates:
-    icons: CheckImages/Default
-    numbers: CheckImages/Numbers
+    base: data/processed_templates
+    numbers: data/numbers
   reports: Reports
   logs: logs
-  item_mappings: item_mappings.csv
-  item_thresholds: item_thresholds.json
+  item_thresholds: data/item_thresholds.json
 
 detection:
   confidence_threshold: 0.95

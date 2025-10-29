@@ -5,3 +5,29 @@
 2025-05-15 18:58:45,049 - FoxholeQuartermaster - INFO - Processed image: C:/Users/edwar/Desktop/StockpileScanner/test-image1.png, detected 28 items
 2025-05-15 19:00:00,507 - FoxholeQuartermaster - INFO - Loading reports from C:/Users/edwar/Desktop/StockpileScanner/Reports
 2025-05-15 19:00:00,526 - FoxholeQuartermaster - INFO - Loaded 56 records from reports
+2025-10-29 07:22:05,433 - FoxholeQuartermaster - INFO - Foxhole Quartermaster initialized
+2025-10-29 07:26:08,982 - FoxholeQuartermaster - INFO - Foxhole Quartermaster initialized
+2025-10-29 07:26:29,147 - FoxholeQuartermaster - INFO - Foxhole Quartermaster initialized
+2025-10-29 07:27:03,571 - FoxholeQuartermaster - INFO - Foxhole Quartermaster initialized
+2025-10-29 07:27:38,289 - FoxholeQuartermaster - INFO - Foxhole Quartermaster initialized
+2025-10-29 07:27:45,667 - FoxholeQuartermaster - INFO - Processing image: E:/Github Local Library/foxhole-quartemaster/test-image1.png
+2025-10-29 07:27:45,667 - FoxholeQuartermaster - ERROR - Error processing image E:/Github Local Library/foxhole-quartemaster/test-image1.png: 'ImageRecognizer' object has no attribute 'process_image'
+2025-10-29 07:34:20,794 - FoxholeQuartermaster - INFO - Foxhole Quartermaster initialized
+2025-10-29 07:34:28,235 - FoxholeQuartermaster - INFO - Processing image: E:/Github Local Library/foxhole-quartemaster/test-image1.png
+2025-10-29 07:34:35,254 - FoxholeQuartermaster - INFO - Processed image: E:/Github Local Library/foxhole-quartemaster/test-image1.png, detected 0 items
+2025-10-29 07:36:10,748 - FoxholeQuartermaster - INFO - Foxhole Quartermaster initialized
+2025-10-29 07:36:15,194 - FoxholeQuartermaster - INFO - Processing image: E:/Github Local Library/foxhole-quartemaster/test-image1.png
+2025-10-29 07:36:17,722 - FoxholeQuartermaster - INFO - Processed image: E:/Github Local Library/foxhole-quartemaster/test-image1.png, detected 0 items
+2025-10-29 07:36:22,319 - FoxholeQuartermaster - INFO - Processing image: E:/Github Local Library/foxhole-quartemaster/test-image1.png
+2025-10-29 07:36:29,338 - FoxholeQuartermaster - INFO - Processed image: E:/Github Local Library/foxhole-quartemaster/test-image1.png, detected 0 items
+2025-10-29 07:38:24,943 - FoxholeQuartermaster - INFO - Foxhole Quartermaster initialized
+2025-10-29 07:38:30,517 - FoxholeQuartermaster - INFO - Processing image: E:/Github Local Library/foxhole-quartemaster/test-image1.png
+2025-10-29 07:38:34,586 - FoxholeQuartermaster - INFO - Processed image: E:/Github Local Library/foxhole-quartemaster/test-image1.png, detected 0 items
+2025-10-29 07:39:47,522 - FoxholeQuartermaster - INFO - Foxhole Quartermaster initialized
+2025-10-29 07:40:03,082 - FoxholeQuartermaster - INFO - Processing image: E:/Github Local Library/foxhole-quartemaster/test-image1.png
+2025-10-29 07:40:27,437 - FoxholeQuartermaster - INFO - Processed image: E:/Github Local Library/foxhole-quartemaster/test-image1.png, detected 0 items
+2025-10-29 07:40:32,508 - FoxholeQuartermaster - INFO - Processing image: E:/Github Local Library/foxhole-quartemaster/test-image1.png
+2025-10-29 07:40:42,470 - FoxholeQuartermaster - INFO - Processed image: E:/Github Local Library/foxhole-quartemaster/test-image1.png, detected 0 items
+2025-10-29 07:45:49,800 - FoxholeQuartermaster - INFO - Foxhole Quartermaster initialized
+2025-10-29 07:46:10,395 - FoxholeQuartermaster - INFO - Processing image: E:/Github Local Library/foxhole-quartemaster/test-image1.png
+2025-10-29 07:47:36,289 - FoxholeQuartermaster - INFO - Processed image: E:/Github Local Library/foxhole-quartemaster/test-image1.png, detected 30 items

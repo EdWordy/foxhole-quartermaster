@@ -7,7 +7,6 @@ Provides a centralized system for managing all application settings.
 import json
 import yaml
 import os
-import pandas as pd
 from pathlib import Path
 from typing import Dict, Any, List, Optional, Union
 
@@ -24,7 +23,7 @@ class ConfigManager:
         """
         self.config_file = Path(config_file)
         
-        # Default thresholds for categories - moved this BEFORE loading config
+        # Default thresholds for categories
         self.default_category_thresholds = {
             'Light Arms': 40,
             'Heavy Arms': 25,
@@ -38,6 +37,19 @@ class ConfigManager:
             'Supplies': 20,
             'Logistics': 5,
             'Other': 0
+        }
+        
+        # Category mapping from game categories to our categories
+        self.category_map = {
+            'EItemCategory::LightArms': 'Light Arms',
+            'EItemCategory::HeavyArms': 'Heavy Arms',
+            'EItemCategory::HeavyAmmo': 'Heavy Arms',
+            'EItemCategory::Utility': 'Infantry Equipment',
+            'EItemCategory::Medical': 'Medical',
+            'EItemCategory::Supplies': 'Supplies',
+            'EItemCategory::Resource': 'Materials',
+            'EItemCategory::Uniform': 'Uniforms',
+            'EItemCategory::Ammunition': 'Munitions',
         }
         
         # Now load the config
@@ -76,9 +88,10 @@ class ConfigManager:
         """
         default_config = {
             'paths': {
+                'catalog': 'data/catalog.json',
                 'templates': {
-                    'icons': 'CheckImages/Default',
-                    'numbers': 'CheckImages/Numbers'
+                    'base': 'data/processed_templates',
+                    'numbers': 'data/numbers'
                 },
                 'reports': 'Reports',
                 'logs': 'logs'
@@ -108,7 +121,7 @@ class ConfigManager:
             config = self.config
             
         # Ensure directory exists
-        os.makedirs(os.path.dirname(self.config_file), exist_ok=True)
+        os.makedirs(os.path.dirname(self.config_file) or '.', exist_ok=True)
         
         try:
             if self.config_file.suffix.lower() == '.yaml':
@@ -120,21 +133,101 @@ class ConfigManager:
         except Exception as e:
             print(f"Error saving configuration: {e}")
     
+    def _load_catalog(self) -> List[Dict[str, Any]]:
+        """
+        Load the game catalog file.
+        
+        Returns:
+            List of catalog entries
+        """
+        catalog_path = Path(self.config.get('paths', {}).get('catalog', 'data/catalog.json'))
+        
+        if not catalog_path.exists():
+            print(f"Warning: Catalog file not found at {catalog_path}")
+            return []
+        
+        try:
+            with open(catalog_path, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        except Exception as e:
+            print(f"Error loading catalog: {e}")
+            return []
+    
+    def _map_category(self, item_category: str) -> str:
+        """
+        Map game category to application category.
+        
+        Args:
+            item_category: Game category string (e.g., 'EItemCategory::Supplies')
+            
+        Returns:
+            Mapped category name
+        """
+        return self.category_map.get(item_category, 'Other')
+    
+    def _extract_icon_filename(self, icon_path: str) -> str:
+        """
+        Extract the filename from the icon path.
+        
+        Args:
+            icon_path: Full icon path from catalog (e.g., 'War/Content/Textures/UI/ItemIcons/ResouceAluminumIcon.0')
+            
+        Returns:
+            Clean filename for template matching
+        """
+        if not icon_path:
+            return ""
+        
+        # Extract filename without path and extension
+        parts = icon_path.split('/')
+        if parts:
+            filename = parts[-1]
+            # Remove .0 suffix if present
+            if filename.endswith('.0'):
+                filename = filename[:-2]
+            return filename
+        
+        return ""
+    
     def _initialize_mappings(self) -> None:
-        """Initialize item mappings and thresholds from files."""
-        # Load item mappings
-        mapping_file = Path(self.config.get('paths', {}).get('item_mappings', 'item_mappings.csv'))
-        if mapping_file.exists():
-            try:
-                self.item_mappings = pd.read_csv(mapping_file).set_index('code').to_dict('index')
-            except Exception as e:
-                print(f"Error loading item mappings: {e}")
-                self.item_mappings = {}
-        else:
-            self.item_mappings = {}
+        """Initialize item mappings and thresholds from catalog."""
+        # Load catalog
+        catalog = self._load_catalog()
+        
+        # Build item mappings from catalog
+        self.item_mappings = {}
+        
+        for entry in catalog:
+            code_name = entry.get('CodeName')
+            if not code_name:
+                continue
+            
+            # Determine category
+            item_category = entry.get('ItemCategory', '')
+            vehicle_profile = entry.get('VehicleProfileType', '')
+            
+            # Map to our category system
+            if vehicle_profile:
+                category = 'Vehicles'
+            else:
+                category = self._map_category(item_category)
+            
+            # Extract icon filename for template matching
+            icon_path = entry.get('Icon', '')
+            icon_filename = self._extract_icon_filename(icon_path)
+            
+            # Store mapping
+            self.item_mappings[code_name] = {
+                'name': entry.get('DisplayName', code_name),
+                'category': category,
+                'description': entry.get('Description', ''),
+                'icon': icon_path,
+                'icon_filename': icon_filename,
+                'encumbrance': entry.get('Encumbrance', 0)
+            }
         
         # Load item thresholds
-        threshold_file = Path(self.config.get('paths', {}).get('item_thresholds', 'item_thresholds.json'))
+        threshold_file = Path(self.config.get('paths', {}).get('item_thresholds', 'data/item_thresholds.json'))
         if threshold_file.exists():
             try:
                 with open(threshold_file, 'r') as f:
@@ -166,14 +259,36 @@ class ConfigManager:
         
         return thresholds
     
+    def get_template_path_for_item(self, item_code: str) -> Optional[Path]:
+        """
+        Get the template image path for an item.
+        
+        Args:
+            item_code: Item code name
+            
+        Returns:
+            Path to the template image, or None if not found
+        """
+        if item_code not in self.item_mappings:
+            return None
+        
+        icon_filename = self.item_mappings[item_code].get('icon_filename', '')
+        if not icon_filename:
+            return None
+        
+        base_path = Path(self.config.get('paths', {}).get('templates', {}).get('base', 'data/processed_templates'))
+        template_path = base_path / item_code / f"{icon_filename}.png"
+        
+        return template_path if template_path.exists() else None
+    
     def save(self) -> None:
         """Save all configuration to files."""
         # Save main configuration
         self._save_config()
         
         # Save item thresholds
-        threshold_file = Path(self.config.get('paths', {}).get('item_thresholds', 'item_thresholds.json'))
-        os.makedirs(os.path.dirname(threshold_file), exist_ok=True)
+        threshold_file = Path(self.config.get('paths', {}).get('item_thresholds', 'data/item_thresholds.json'))
+        os.makedirs(os.path.dirname(threshold_file) or '.', exist_ok=True)
         
         try:
             with open(threshold_file, 'w') as f:
@@ -289,12 +404,13 @@ class ConfigManager:
         Get paths to template directories.
         
         Returns:
-            Dict containing paths to icon and number templates
+            Dict containing paths to base templates and number templates
         """
-        return self.config.get('paths', {}).get('templates', {
-            'icons': 'CheckImages/Default',
-            'numbers': 'CheckImages/Numbers'
-        })
+        templates = self.config.get('paths', {}).get('templates', {})
+        return {
+            'base': templates.get('base', 'data/processed_templates'),
+            'numbers': templates.get('numbers', 'data/numbers')
+        }
     
     def get_detection_settings(self) -> Dict[str, Any]:
         """
